@@ -35,6 +35,7 @@ root/
 ├── images/
 │
 ├── js/
+│   ├── main.js
 │
 ├── home.html
 │
@@ -49,6 +50,12 @@ root/
 └── contact.html
 
 ```
+
+### Code details
+- [style.css](./css/style.css) contains `header`, `footer` and other common styles for all pages.
+- [main.js](./js/main.js) is for handling `header`, `footer` and other common functionalities.
+
+---
 
 ## Getting Started
 To get a local copy up and running follow these simple steps.
