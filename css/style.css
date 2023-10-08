@@ -18,8 +18,16 @@ a {
 
 :root {
     /* Variables */
-    --color-white: #fff;
-    --transition: all 0.3s ease;
+    --transition-300ms: all 0.3s ease;
+    --color-primary: #350A51;
+    --color-secondary: #732A19;
+    --color-light1: #BC8C40;
+    --color-light2: #FFF1D4;
+    --color-primary-light: #523368;
+    --color-danger: #DF0012;
+    --color-success: #55D76D;
+    --color-black: #000000;
+    --color-white: #ffffff;
 }
 
 
@@ -31,18 +39,20 @@ header {
 nav {
     width: 100%;
     height: 7rem;
-    background-color: orange;
+    background-color: var(--color-primary);
+    color: var(--color-light1);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: fixed;
     user-select: none !important;
-    transition: var(--transition);
+    transition: var(--transition-300ms);
     z-index: 1000;
 }
 
 nav.on-scroll {
     height: 5.5rem;
+    box-shadow: 0 0 7px 3px rgba(44, 24, 63, 0.699);
 }
 
 #logo {
@@ -54,7 +64,7 @@ nav.on-scroll {
 
 #logo img {
     height: 60px;
-    transition: var(--transition)
+    transition: var(--transition-300ms);
 }
 
 img.shrink-on-scroll {
@@ -72,30 +82,104 @@ img.shrink-on-scroll {
     align-items: center;
     gap: 6rem;
     height: 100%;
-    transition: var(--transition);
+    transition: var(--transition-300ms);
 }
 
 #nav-menu li {
+    font-weight: bold;
     position: relative;
-    transition: var(--transition);
+    transition: var(--transition-300ms);
+}
+
+#nav-menu li:hover {
+    color: var(--color-light2);
 }
 
 #nav-menu li::after {
     content: "";
     display: inline;
     position: absolute;
-    bottom: -5px;
+    bottom: -3px;
     left: 0;
-    background-color: green;
+    background-color: var(--color-light1);
     width: 0;
-    height: 5px;
-    border-radius: 10px;
-    transition: var(--transition);
+    height: 3px;
+    border-radius: 2px;
+    transition: animation;
 }
 
 #nav-menu li:hover::after {
-    width: 100%;
+    animation: expand-line 300ms ease-in-out forwards;
 }
+
+#current-page {
+    position: relative;
+    color: var(--color-light2);
+}
+
+#current-page::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: -20%;
+    bottom: -51px;
+    opacity: 0;
+    background-color: var(--color-light2);
+    width: 140%;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 50px 3px rgba(255, 241, 212, 0.411);
+    transition: var(--transition-300ms);
+    animation: highlight-current-page-full 400ms forwards;
+}
+
+nav.on-scroll #current-page::after {
+    bottom: -39px;
+    animation: highlight-current-page-shrink 400ms forwards;
+}
+
+
+/* !NOTE: current page pop up from down with fade animation */
+
+#extra-space {
+    width: 100%;
+    height: 7rem;
+}
+
+@keyframes expand-line {
+    0% {
+        left: 50%;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes highlight-current-page-full {
+    0% {
+        opacity: 0;
+        bottom: -51px;
+    }
+    100% {
+        opacity: 100%;
+        bottom: -46px;
+    }
+}
+
+@keyframes highlight-current-page-shrink {
+    0% {
+        opacity: 0;
+        bottom: -39px;
+    }
+    100% {
+        opacity: 100%;
+        bottom: -34px;
+    }
+}
+
+
 
 /* ============================== Footer ============================== */
 footer {
