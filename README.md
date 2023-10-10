@@ -16,12 +16,19 @@ This is the official website of Sahara society. It is a social welfare society o
 
 ## Features
 
--   [ ] **Home Page**
+-   [x] **Home Page**
 -   [ ] **About Us**
 -   [ ] **Activities**
 -   [ ] **Events**
 -   [ ] **Our Team**
 -   [ ] **Contact**
+
+### Tasks
+- [x] **Color Theme**
+- [ ] **Font**
+- [ ] **Illustrations**
+- [ ] **Responsiveness**
+- [ ] **Mail service for contact**
 
 ## Project Structure
 
@@ -60,6 +67,17 @@ root/
 
 -   [style.css](./css/style.css) contains `header`, `footer` and other common styles for all pages.
 -   [main.js](./js/main.js) is for handling `header`, `footer` and other common functionalities.
+-   **Color theme used**:
+    ```css
+    --color-primary: #2B124C;
+    --color-secondary: #522B5B;
+    --color-light1: #854F6C;
+    --color-light2: #DFB6B2;
+    --color-dark: #190019;
+    --color-offwhite: #FBE4D8;
+    --color-black: #000000;
+    --color-white: #ffffff;
+    ```
 
 ---
 
