@@ -38,7 +38,7 @@ main{
 }
 
 .contact{
-    background: #000;
+    background: #ffffff;
 }
 
 .submit-form{
@@ -50,4 +50,56 @@ main{
     padding-top: 20px;
     font-size: 35px;
     color: #8550ec;
+    font-weight: 600;
 }
+
+.image{
+    height: 320px;
+    width: 320px;
+}
+.social-media{
+    display: flex;
+    list-style:none ;
+}
+.social-media i{
+    background: #8550ec;
+    padding: 5px;
+    border-radius:5px;
+}
+.social-media ul li{
+    padding-left: 15px;
+    font-size: 24px;
+    margin-top: 10px;
+}
+.social-media i:hover{
+    background: #ffff;
+    color: #8550ec;
+}
+.social-media a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
