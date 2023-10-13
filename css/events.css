@@ -1,0 +1,8 @@
+@import url(./style.css);
+
+main {
+    width: 100%;
+    height: 150vh;
+    background-color: var(--color-light2);
+}
+

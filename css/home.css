@@ -16,6 +16,7 @@ main {
     user-select: none;
     background-color: var(--color-primary);
     background-size: cover;
+    font-family: 'Bree Serif', serif;
 }
 
 #hands-heart {
