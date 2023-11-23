@@ -26,6 +26,9 @@ a {
     --color-dark: #190019;
     --color-offwhite: #FBE4D8;
 
+    --color-success: #1DC690;
+    --color-danger: #E53119;
+
     --color-black: #000000;
     --color-white: #ffffff;
 }
@@ -55,7 +58,7 @@ header {
 
 #navigation.on-scroll {
     height: 5.5rem;
-    /* background-color: var(--color-secondary); */
+    background-color: var(--color-secondary);
     box-shadow: 0 0 10px 4px rgba(44, 24, 63, 0.699);
 
 }
@@ -247,11 +250,21 @@ article span {
     width: 120px;
     height: 50px;
     position: relative;
-    background-color: var(--color-light2);
+    font-weight: bold;
+    background-color: var(--color-success);
     color: var(--color-primary);
     border-radius: 10px;
     font-size: 1.1rem;
     transition: var(--transition-300ms);
+}
+
+.icon-hidden {
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+button:hover .icon-hidden {
+    opacity: 100%;
 }
 
 
