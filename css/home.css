@@ -69,6 +69,7 @@ main {
     width: fit-content;
     font-size: 8rem;
     font-weight: bolder;
+    letter-spacing: 0.5rem;
     line-height: 80%;
     color: var(--color-offwhite);
     position: relative;

@@ -65,6 +65,7 @@ header {
 }
 
 #logo {
+    width: 180px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -127,24 +128,24 @@ img.shrink-on-scroll {
     color: var(--color-offwhite);
 }
 
-#current-page::after {
+#current-page {
     content: "";
     display: inline-block;
     position: absolute;
+    top: -44px;
     left: -20%;
     opacity: 0;
     background-color: var(--color-light2);
     width: 140%;
     height: 5px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0 0 10px 10px;
     box-shadow: 0 0 50px 3px rgba(255, 241, 212, 0.411);
     transition: var(--transition-300ms);
     animation: highlight-current-page-full 400ms forwards;
 }
 
-#navigation.on-scroll #current-page::after {
-    bottom: -39px;
-    animation: highlight-current-page-shrink 400ms forwards;
+#current-page.shrink-nav {
+    top: -31px;
 }
 
 
