@@ -32,6 +32,10 @@ This is the official website of Sahara society. It is a social welfare society o
 - [ ] **Illustrations**
 - [ ] **Responsiveness**
 - [ ] **Mail service for contact**
+- [ ] Activities & Events will have carousel
+- [ ] Activities border left
+- [ ]  Activities text left
+- [ ] Animations left
 
 ## Project Structure
 

@@ -248,8 +248,8 @@ section h1::after {
 }
 
 #activities h1::after {
-    content: "Activities";
-    left: 35.5%;
+    content: "What We Do";
+    left: 33.5%;
 }
 
 #activity-container {
@@ -356,7 +356,7 @@ article .dots {
 
 #activity-1 {
     grid-area: act-1;
-    width: 600px !important;
+    width: 550px !important;
 }
 
 #activity-1 button {
@@ -375,6 +375,7 @@ article .dots {
 
 #outreach {
     background-color: var(--color-secondary);
+    height: 550px;
 }
 
 #outreach h1 {
@@ -397,91 +398,98 @@ article .dots {
     align-items: center;
     width: 100%;
     height: 250px;
-    gap: 1em;
-    padding: 0em 3em 3em;
+    gap: 2rem;
+    margin-top: 3rem;
     z-index: -3;
 }
 
 #stats article {
     width: 300px;
     height: 250px;
-    border-radius: 5px;
-    background-color: var(--color-primary);
     position: relative;
+    padding-top: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
     overflow: hidden;
     z-index: 1;
-    border-radius: 20px;
-
 }
 
-#stats article .card-image {
-    width: 100%;
-    height: 150px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-    background-color: var(--color-light2);
-    opacity: 0.2;
-}
-
-#stats article .card-image::before {
-    content: "";
+#stats article img {
     display: block;
+    width: 80px;
+}
+
+#whatsapp img {
+    width: 60px !important;
+    margin-bottom: 15px !important;
+}
+
+#instagram img, #linkedin img {
+    width: 55px !important;
+    margin-bottom: 20px !important;
+}
+
+#yt img {
+    margin-bottom: 10px !important;
+}
+
+#stats article h2 {
+    font-size: 2rem;
+    color: var(--color-offwhite);
+}
+
+#stats article h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+#stats article h4 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    line-height: 80%;
+}
+
+#social-button, #social-button a {
+    all: unset;
+    cursor: pointer;
+}
+
+#social-button {
     position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 53%;
+    right: 20%;
+    opacity: 0;
+    background: transparent;
+}
+
+article:hover #social-button {
+    opacity: 1;
+}
+
+#stats button a {
+    display: block;
     width: 100%;
     height: 100%;
-    border-radius: inherit;
-    filter: blur(5px);
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.3s ease-out 0s;
-
 }
 
-#stats article:hover .card-image:before {
-    transform: scale(2);
-}
-
-#stats .card-image h3 {
-    position: relative;
+#social-button a i {
     opacity: 1;
-    color: var(--color-dark);
-}
-
-#stats #members .card-image::before {
-    background-image: url("../images/3 presons logo.png");
-}
-
-#stats #instagram .card-image::before {
-    background-image: url("../images/instagram logo.png");
-}
-
-#stats #linkedin .card-image::before {
-    background-image: url("../images/linkedin logo.png");
-}
-
-#stats #whatsapp .card-image::before {
-    background-image: url("../images/whatsapp logo.png");
-}
-
-#stats #yt .card-image::before {
-    background-image: url("../images/yt-logo.png");
+    font-size: 1.5rem;
+    color: var(--color-offwhite)
 }
 
 /* 
 !PENDING:
 - Activities & Events will have carousel, 1 activity, 1 event with ss and check out button.
-- Achievements stat cards, number should hightlight, fixed alignment of card
-card card card
-  card  card
-
-this view
-
-logo\n numbers on the .card-image
-link to the page like join button has...
-arrow link and text is linked...
+- Activities border left
+- Activities text left
+- Animations left
 */
 
 
