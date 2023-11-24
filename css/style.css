@@ -96,6 +96,7 @@ img.shrink-on-scroll {
     gap: 6rem;
     height: 100%;
     transition: var(--transition-300ms);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 #nav-menu li {
