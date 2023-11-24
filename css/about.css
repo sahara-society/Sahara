@@ -24,10 +24,14 @@ section h1 {
     z-index: 1;
 }
 section h1::after {
+    font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 160%;
+    color: var(--color-offwhite);
     position: absolute;
-    opacity: 7%;
+    top: -60%;
+    opacity: 0;
     z-index: -1;
+    animation: fade-out 500ms ease-in 1.3s forwards;
 }
 
 /* ============================== About ============================== */
@@ -56,6 +60,7 @@ section h1::after {
 
 #about h1::after {
     content: "SAHARA";
+    font-family: inherit;
     font-size: 6.5rem;
     left: 0;
     top: -11%;
@@ -108,7 +113,7 @@ section h1::after {
     color: var(--color-primary);
     border-radius: 10px;
     opacity: 0;
-    animation: scale-button 500ms ease-out 2s forwards;
+    animation: scale-button 500ms ease-out 2.3s forwards;
 }
 
 .icon-hidden {
@@ -160,12 +165,7 @@ section h1::after {
 
 #goals h1::after {
     content: "Goals";
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    color: var(--color-offwhite);
-    top: -50%;
     left: 41%;
-    transform: scale(0);
-    animation: scale-out 500ms ease-out 1s forwards;
 }
 
 #goal-container {
@@ -231,12 +231,6 @@ section h1::after {
     opacity: 0.9;
 }
 
-/* 
-!PENDING:
-- Activities & Events will have carousel, 1 activity, 1 event with ss and check out button.
-- Achievements info cards which I have made in synapse...
-*/
-
 /* ============================== Activities ============================== */
 
 #activities {
@@ -255,12 +249,7 @@ section h1::after {
 
 #activities h1::after {
     content: "Activities";
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    color: var(--color-offwhite);
-    top: -50%;
     left: 35.5%;
-    transform: scale(0);
-    animation: scale-out 500ms ease-out 1s forwards;
 }
 
 #activity-container {
@@ -302,7 +291,6 @@ section h1::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     border-radius: inherit;
 }
 
@@ -323,7 +311,7 @@ section h1::after {
 
 article .dots {
     position: absolute;
-    bottom: 48%;
+    bottom: 57%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -360,20 +348,15 @@ article .dots {
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 5px;
-    background-color: var(--color-offwhite);
-    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-offwhite);
     opacity: 0;
     animation: scale-button 500ms ease-out 2s forwards;
 }
 
 #activity-1 {
     grid-area: act-1;
-    width: 700px !important;
-    height: 500px;
-}
-
-#activity-1 figure {
-    height: 55% !important;
+    width: 600px !important;
 }
 
 #activity-1 button {
@@ -393,6 +376,114 @@ article .dots {
 #outreach {
     background-color: var(--color-secondary);
 }
+
+#outreach h1 {
+    grid-area: heading;
+    font-size: 4rem;
+    color: var(--color-light2);
+    animation: scale-out 1s ease-out forwards;
+    transform: scale(0.8);
+}
+
+#outreach h1::after {
+    content: "Outreach";
+    left: 35.5%;
+}
+
+#outreach #stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    gap: 1em;
+    padding: 0em 3em 3em;
+    z-index: -3;
+}
+
+#stats article {
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 20px;
+
+}
+
+#stats article .card-image {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    background-color: var(--color-light2);
+    opacity: 0.2;
+}
+
+#stats article .card-image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    filter: blur(5px);
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease-out 0s;
+
+}
+
+#stats article:hover .card-image:before {
+    transform: scale(2);
+}
+
+#stats .card-image h3 {
+    position: relative;
+    opacity: 1;
+    color: var(--color-dark);
+}
+
+#stats #members .card-image::before {
+    background-image: url("../images/3 presons logo.png");
+}
+
+#stats #instagram .card-image::before {
+    background-image: url("../images/instagram logo.png");
+}
+
+#stats #linkedin .card-image::before {
+    background-image: url("../images/linkedin logo.png");
+}
+
+#stats #whatsapp .card-image::before {
+    background-image: url("../images/whatsapp logo.png");
+}
+
+#stats #yt .card-image::before {
+    background-image: url("../images/yt-logo.png");
+}
+
+/* 
+!PENDING:
+- Activities & Events will have carousel, 1 activity, 1 event with ss and check out button.
+- Achievements stat cards, number should hightlight, fixed alignment of card
+card card card
+  card  card
+
+this view
+
+logo\n numbers on the .card-image
+link to the page like join button has...
+arrow link and text is linked...
+*/
+
 
 /* ============================== Animations  ============================== */
 
@@ -429,5 +520,14 @@ article .dots {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
     }
 }
