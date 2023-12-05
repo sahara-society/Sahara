@@ -106,7 +106,7 @@ main {
     width: 800px;
     height: 100px;
     padding-top: 2rem;
-    color: var(--color-light2);
+    color: var(--color-offwhite);
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -125,14 +125,10 @@ main {
 #intro #second {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-weight: normal;
-    color: var(--color-light1);
+    color: var(--color-light2);
     opacity: 0;
     margin-top: 0.5rem;
     animation: go-up-and-fade-out 1.5s ease-in-out 2s forwards;
-}
-
-#intro #second strong {
-    color: var(--color-light2);
 }
 
 #intro a {

@@ -35,10 +35,11 @@ section h1 {
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
-    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 30%);
-background: -webkit-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 30%);
-background: linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 30%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);}
+    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 15%);
+    background: -webkit-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 15%);
+    background: linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 15%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);
+}
 
 #intro h1 {
     line-height: 90%;
@@ -58,7 +59,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endCo
     width: 60%;
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 800;
     margin-top: -1rem;
 }
 
