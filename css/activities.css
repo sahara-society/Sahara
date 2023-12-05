@@ -7,7 +7,6 @@ main {
     position: relative;
     text-align: center;
     background-color: var(--color-primary);
-    
     background-size: cover;
     font-family: "Bree Serif", serif;
     color: var(--color-light2);
@@ -72,11 +71,17 @@ section h1 {
 #act-types article {
     width: 250px;
     height: 100px;
-    background-color: var(--color-secondary);
+    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 65%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 1s ease-in;
+}
+
+#act-types article:hover {
+    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 95%);
+
 }
 
 /* =============================== Activities =============================== */
