@@ -284,27 +284,33 @@ section h1::after {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 51%, rgba(223,182,178,1) 96%);
-    background: -webkit-linear-gradient(0deg, rgba(82,43,91,1) 51%, rgba(223,182,178,1) 96%);
-    background: linear-gradient(0deg, rgba(82,43,91,1) 51%, rgba(223,182,178,1) 96%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#dfb6b2",GradientType=1);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 33%, rgba(82,43,91,1) 68%);
+    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 33%, rgba(82,43,91,1) 68%);
+    background: linear-gradient(0deg, rgba(43,18,76,1) 33%, rgba(82,43,91,1) 68%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 }
 
 #activity-container article:hover {
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 22%, rgba(82,43,91,1) 69%, rgba(223,182,178,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 22%, rgba(82,43,91,1) 69%, rgba(223,182,178,1) 100%);
-    background: linear-gradient(0deg, rgba(43,18,76,1) 22%, rgba(82,43,91,1) 69%, rgba(223,182,178,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#dfb6b2",GradientType=1);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
+    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
+    background: linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 }
 
 #activity-container article h2 {
     margin: 2rem 0 1rem 0;
+    color: var(--color-light2);
 }
 
 #activity-container article p {
     padding: 0 2rem 1.5rem 3rem;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: 500;
+    font-weight: 800;
+    color: var(--color-light2);
+}
+
+#activity-container article:hover h2 {
+    color: var(--color-offwhite);
 }
 
 #activity-container article button {
@@ -391,7 +397,7 @@ section h1::after {
 #outreach h1 {
     grid-area: heading;
     font-size: 4rem;
-    color: var(--color-offwhite);
+    color: var(--color-light2);
     animation: scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
