@@ -15,13 +15,26 @@ main {
 main section {
     width: 100%;
     height: 1000px;
-    padding: 5rem 11rem;
+    padding: 6rem 11rem;
 }
 
 section h1 {
     font-size: 5rem;
     position: relative;
     z-index: 1;
+    animation: scale-out 1s ease-out forwards;
+    transform: scale(0.7);
+}
+
+section h1::after {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 160%;
+    color: var(--color-offwhite);
+    position: absolute;
+    top: -60%;
+    opacity: 0;
+    z-index: -1;
+    animation: fade-out 500ms ease-in 1.3s forwards;
 }
 
 /* =============================== INTRO =============================== */
@@ -34,14 +47,18 @@ section h1 {
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
-    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 15%);
-    background: -webkit-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 15%);
-    background: linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 15%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    background: linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
+    
 }
 
 #intro h1 {
     line-height: 90%;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: show-heading 1s ease-out forwards;
 }
 
 #intro figure {
@@ -71,25 +88,57 @@ section h1 {
 #act-types article {
     width: 250px;
     height: 100px;
-    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 65%);
+    background: -moz-linear-gradient(-45deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 65%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: all 1s ease-in;
+    perspective: 1000px;
+    transform: rotateY(30deg);
+    transition: transform 300ms ease-in-out, background 300ms ease-in-out;
 }
 
 #act-types article:hover {
-    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 95%);
+    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    transform: rotateY(0deg);
 
 }
 
 /* =============================== Activities =============================== */
 
 .activities {
-    background-color: var(--color-secondary);
+    height: fit-content;
+
+    background: rgb(82,43,91);
+    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: linear-gradient(0deg, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);
 }
 
+.activities h1 {
+    font-size: 4.5rem;
+    position: relative;
+}
+
+.activities h1::after {
+    content: "Udaipur";
+    left: 35.5%;
+    position: absolute;
+
+}
+
+.activities h2 {
+    font-size: 3.5rem;
+    position: relative;
+    line-height: 90%;
+}
+
+.collab {
+    background-color: black;
+
+}
 
 
 /* =============================== Activity-1 =============================== */
@@ -100,4 +149,39 @@ section h1 {
 background: -webkit-linear-gradient(0deg, rgba(133,79,108,1) 3%, rgba(82,43,91,1) 53%, rgba(43,18,76,1) 95%);
 background: linear-gradient(0deg, rgba(133,79,108,1) 3%, rgba(82,43,91,1) 53%, rgba(43,18,76,1) 95%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#2b124c",GradientType=1); */
+}
+
+
+
+
+/* =============================== Animations =============================== */
+
+@keyframes show-heading {
+    0% {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+
+@keyframes scale-out {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
 }
