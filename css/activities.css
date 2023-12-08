@@ -184,7 +184,7 @@ section h1::after {
 
 .visual-des {
     width: 100%;
-    height: 400px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -194,16 +194,55 @@ section h1::after {
 }
 
 .gallery {
-    width: 900px;
-    height: 506px;
-    border-radius: 20px;
-    border: 5px solid var(--color-offwhite);
+    width: 1200px;
+    height: 478px;
+    border: 2px solid var(--color-light1);
     overflow: hidden;
+    position: relative;
+    user-select: none;
 }
 
-.gallery img {
+.gallery figure {
     width: 100%;
+    height: 100%;
 }
+
+.gallery-button {
+    width: fit-content;
+    height: 100%;
+    padding-top: 180px;
+    background-color: transparent;
+    z-index: 2;
+    font-size: 5rem;
+    position: absolute;
+    left: -1%;
+    opacity: 0.1;
+    cursor: pointer;
+}
+
+.gallery-button:hover {
+    opacity: 1;
+}
+
+.right {
+    top: 0;
+    left: 94%;
+}
+
+.gallery figure .main-img {
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.gallery figure .bg-img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+}
+
 
 
 .date-loc {
