@@ -28,10 +28,10 @@ section h1 {
 
 section h1::after {
     font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 160%;
+    font-size: 220%;
     color: var(--color-offwhite);
     position: absolute;
-    top: -60%;
+    top: -80%;
     opacity: 0;
     z-index: -1;
     animation: fade-out 500ms ease-in 1.3s forwards;
@@ -47,11 +47,13 @@ section h1::after {
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+
+    background-color: var(--color-primary);
+    /* background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
     background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
     background: linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
-    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1); */
+
 }
 
 #intro h1 {
@@ -80,29 +82,55 @@ section h1::after {
 }
 
 #act-types {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2.5rem;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #act-types article {
-    width: 250px;
-    height: 100px;
-    background: -moz-linear-gradient(-45deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 65%);
+    width: 350px;
+    height: 120px;
+    padding: 1rem 0;
+    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 95%);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     transition: all 1s ease-in;
     perspective: 1000px;
-    transform: rotateY(30deg);
-    transition: transform 300ms ease-in-out, background 300ms ease-in-out;
+}
+
+#act-types article a {
+    opacity: 0;
+    padding-top: 10px;
+    position: relative;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: opacity 300ms ease-in-out;
+}
+
+#act-types article a span {
+    display: inline-block;
 }
 
 #act-types article:hover {
-    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
     transform: rotateY(0deg);
+}
 
+#act-types article:hover a {
+    opacity: 1;
+}
+
+#act-types article a:hover {
+    text-decoration: underline;
+}
+
+#act-types article:hover a span {
+    animation: move-left-right 1s ease-in-out 300ms infinite;
 }
 
 /* =============================== Activities =============================== */
@@ -113,13 +141,13 @@ section h1::after {
     flex-direction: column;
     align-items: center;
     row-gap: 1rem;
+    padding: 6rem 20rem;
 
-
-    background: rgb(82,43,91);
-    background: -moz-linear-gradient(0deg, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
-    background: linear-gradient(0deg, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);
+    background: rgb(43,18,76);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#2b124c",GradientType=1);
 }
 
 .activities h1 {
@@ -129,8 +157,10 @@ section h1::after {
 }
 
 .activities h1::after {
-    content: "Udaipur";
-    left: -30%;
+    content: "#1";
+    font-family: "Bree Serif", serif;
+    left: 42%;
+    /* top: -100%; */
     position: absolute;
 
 }
@@ -146,7 +176,6 @@ section h1::after {
 }
 
 .collab {
-    /* background-color: black; */
     width: 70%;
     margin-top: 2rem;
     display: flex;
@@ -156,7 +185,6 @@ section h1::after {
 }
 
 .parties {
-    /* background-color: var(--color-offwhite); */
     display: flex;
     flex-direction: row;
 }
@@ -170,10 +198,11 @@ section h1::after {
     margin: 10px;
     width: 70%;
     text-align: left;
+    color: var(--color-light2);
 }
 
 .parties h3::after {
-    content: "Parties";
+    content: "";
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: bold;
     font-size: 60%;
@@ -182,21 +211,11 @@ section h1::after {
     top: 55%;
 }
 
-.visual-des {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    align-items: stretch;
-    padding: 10px;
-}
-
 .gallery {
-    width: 1200px;
-    height: 478px;
+    width: 100%;
+    height: 600px;
     border: 2px solid var(--color-light1);
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     user-select: none;
@@ -205,28 +224,6 @@ section h1::after {
 .gallery figure {
     width: 100%;
     height: 100%;
-}
-
-.gallery-button {
-    width: fit-content;
-    height: 100%;
-    padding-top: 180px;
-    background-color: transparent;
-    z-index: 2;
-    font-size: 5rem;
-    position: absolute;
-    left: -1%;
-    opacity: 0.1;
-    cursor: pointer;
-}
-
-.gallery-button:hover {
-    opacity: 1;
-}
-
-.right {
-    top: 0;
-    left: 94%;
 }
 
 .gallery figure .main-img {
@@ -244,35 +241,139 @@ section h1::after {
 }
 
 
-
-.date-loc {
+.trip-details {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: start;
     text-align: left;
-    /* background-color: green; */
-    padding: 0 30px;
 }
 
 address, .date {
     font-size: 1.3rem;
 }
 
-
 .date div {
     text-align: center;
 }
 
-.date-loc i {
+.date time {
+    display: inline-block;
+    width: 100%;
+}
+
+.trip-details i {
     font-size: 2rem;
     padding-left: 25px;
-
     text-align: center;
 }
 
-/* !PENDING:
-Ratio of images in gallery, 16.9 or 21.9 */
+.route {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.route .loc {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-light2);
+}
+
+.lines {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lines span {
+    width: 80px;
+    height: 30px;
+    border-radius: 50%;
+    border-top: 5px dashed var(--color-light1);
+}
+
+.lines span:nth-child(even) {
+    border-top: none;
+    border-left: none;
+    border-bottom: 5px dashed var(--color-light1);
+    transform: skewX(-20deg);
+}
+
+#line-start {
+    border-top: none;
+    border-bottom: 5px dashed var(--color-light1);
+}
+
+#line-end {
+    border-top: none;
+    border-bottom: 5px dashed var(--color-light1);
+}
+
+.activity-about {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.des {
+    width: 70%;
+    height: 100%;
+    text-align: left;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+}
+
+.des p {
+    margin: 1.5rem 0;
+    font-weight: normal
+}
+
+.des li {
+    list-style: "↪ ";;
+    margin-left: 20px;
+    line-height: 2rem;
+}
+
+.links {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.links button {
+    width: 200px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: var(--color-light2);
+    color: var(--color-primary);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+
+}
+
+/*
+!PENDING:
+- outer link icon in all buttons, buttons are together in a row
+- donation line having amount with student name and roll no.
+- feedback is like gallary, but auto slides.
+- A good font for paras ask content team.   
+*/
 
 /* =============================== Activity-1 =============================== */
 
@@ -329,5 +430,17 @@ Ratio of images in gallery, 16.9 or 21.9 */
     }
     100% {
         opacity: 10%;
+    }
+}
+
+@keyframes move-left-right {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
