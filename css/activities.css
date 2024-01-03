@@ -160,7 +160,6 @@ section h1::after {
     content: "#1";
     font-family: "Bree Serif", serif;
     left: 42%;
-    /* top: -100%; */
     position: absolute;
 
 }
@@ -221,6 +220,10 @@ section h1::after {
     user-select: none;
 }
 
+.gallery:hover {
+    border-color: var(--color-light2);
+}
+
 .gallery figure {
     width: 100%;
     height: 100%;
@@ -240,7 +243,6 @@ section h1::after {
     z-index: 1;
 }
 
-
 .trip-details {
     width: 100%;
     display: flex;
@@ -250,23 +252,24 @@ section h1::after {
     text-align: left;
 }
 
-address, .date {
-    font-size: 1.3rem;
-}
-
-.date div {
-    text-align: center;
-}
-
 .date time {
     display: inline-block;
     width: 100%;
 }
 
+.location, .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--color-offwhite);
+}
+
+
 .trip-details i {
     font-size: 2rem;
-    padding-left: 25px;
-    text-align: center;
+    color: var(--color-light1);
 }
 
 .route {
@@ -318,53 +321,57 @@ address, .date {
 
 .activity-about {
     width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height: fit-content;
+    display: grid;
+    grid-template-areas: "des des des des des" "points points points points button";
+    row-gap: 2rem;
 }
 
-.des {
-    width: 70%;
-    height: 100%;
+.activity-about p {
+    grid-area: des;
     text-align: left;
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: bold;
 }
 
-.des p {
-    margin: 1.5rem 0;
-    font-weight: normal
+.activity-about ul {
+    grid-area: points;
+    text-align: left;
 }
 
-.des li {
-    list-style: "↪ ";;
+.activity-about ul li {
     margin-left: 20px;
-    line-height: 2rem;
+    padding-left: 10px;
+    line-height: 1.5rem;
 }
 
-.links {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-    align-items: center;
+.activity-about ul li::marker {
+    content: "↪";
+    color: var(--color-light1);
+    font-weight: bolder;
 }
 
-.links button {
+.activity-about button {
+    grid-area: button;
+    justify-self: center;
     width: 200px;
     height: 70px;
     border-radius: 10px;
-    background-color: var(--color-light2);
-    color: var(--color-primary);
+    /* background-color: var(--color-secondary); */
+    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 65%);
+    color: var(--color-light1);
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 300ms ease-in-out;
+}
 
+.activity-about button:hover {
+    /* background-color: var(--color-light2); */
+    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    color: var(--color-light2);
+    font-size: 1.2rem;
 }
 
 /*
