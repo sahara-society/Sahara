@@ -27,11 +27,12 @@ section h1 {
 }
 
 section h1::after {
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-size: 220%;
+    font-family: "Bree Serif", serif;
+    font-size: 250%;
     color: var(--color-offwhite);
     position: absolute;
-    top: -80%;
+    top: -100%;
+    left: 42%;
     opacity: 0;
     z-index: -1;
     animation: fade-out 500ms ease-in 1.3s forwards;
@@ -92,7 +93,7 @@ section h1::after {
     width: 350px;
     height: 120px;
     padding: 1rem 0;
-    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 95%);
+    background-color: var(--color-secondary);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -117,7 +118,6 @@ section h1::after {
 }
 
 #act-types article:hover {
-    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
     transform: rotateY(0deg);
 }
 
@@ -154,14 +154,6 @@ section h1::after {
     font-size: 4.5rem;
     position: relative;
     color: var(--color-offwhite);
-}
-
-.activities h1::after {
-    content: "#1";
-    font-family: "Bree Serif", serif;
-    left: 42%;
-    position: absolute;
-
 }
 
 .activities h2 {
@@ -209,6 +201,19 @@ section h1::after {
     left: 0;
     top: 55%;
 }
+
+.synapse {
+    width: 300px;
+}
+
+.synapse h3::after {
+    content: "The Socio-Linguistic Society";
+}
+
+.boundless h3::after {
+    content: "The Travel Club";
+}
+
 
 .gallery {
     width: 100%;
@@ -263,7 +268,8 @@ section h1::after {
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    color: var(--color-offwhite);
+    color: var(--color-light2);
+    text-align: center;
 }
 
 
@@ -287,8 +293,14 @@ section h1::after {
     color: var(--color-light2);
 }
 
+.loc {
+    width: fit-content;
+    max-width: 150px;
+    text-align: center;
+}
+
+
 .lines {
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -319,12 +331,19 @@ section h1::after {
     border-bottom: 5px dashed var(--color-light1);
 }
 
+.location:hover i, .date:hover i, .route:hover span {
+    color: var(--color-light2);
+    border-color: var(--color-light2) !important;
+}
+
+
 .activity-about {
     width: 100%;
     height: fit-content;
     display: grid;
-    grid-template-areas: "des des des des des" "points points points points button";
-    row-gap: 2rem;
+    grid-template-areas: "des des des des des des des" " points points points points points points button";
+    row-gap: 1rem;
+    padding: 2rem 0;
 }
 
 .activity-about p {
@@ -351,62 +370,170 @@ section h1::after {
     font-weight: bolder;
 }
 
-.activity-about button {
+.activity-about .links {
     grid-area: button;
-    justify-self: center;
-    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.activity-about button {
+    width: 220px;
     height: 70px;
     border-radius: 10px;
-    /* background-color: var(--color-secondary); */
-    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 65%);
     color: var(--color-light1);
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     cursor: pointer;
     transition: all 300ms ease-in-out;
+
+    background: rgb(82,43,91);
+    background: -moz-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 90%);
+    background: -webkit-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 90%);
+    background: linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
 }
 
 .activity-about button:hover {
-    /* background-color: var(--color-light2); */
-    background: -moz-linear-gradient(-90deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
     color: var(--color-light2);
     font-size: 1.2rem;
+
+    background: rgb(82,43,91);
+    background: -moz-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: -webkit-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
 }
+
+.activity-about button i {
+    padding-left: 5px;
+}
+
+#don-link {
+    font-size: 1.2rem;
+    background: var(--color-success);
+}
+
+#don-link:hover {
+    color: var(--color-primary);
+}
+
+
+.testimonials {
+    /* background-color: var(--color-secondary); */
+    overflow: hidden;
+    width: 100%;
+    padding: 3rem 0;
+    height: 480px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+}
+
+.tm-carousel {
+    width: fit-content;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    transform: translateX(10px);
+}
+
+.tm-carousel article {
+    padding: 3rem;
+    padding-bottom: 2rem;
+    height: 250px;
+    background-color: var(--color-light1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    filter: blur(2px);
+    position: relative;
+}
+
+.tm-carousel article p {
+    width: 200px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 0.5rem;
+    color: var(--color-light2);
+}
+
+.tm-carousel article h4 {
+    color: var(--color-offwhite);
+}
+
+.tm-carousel article h4::before, .tm-carousel article h4::after {
+    position: absolute;
+    content: "“";
+    color: var(--color-secondary);
+    font-size: 100px;
+    font-family:Arial, Helvetica, sans-serif;
+    opacity: 0.2;
+    top: 0;
+    left: 5%;
+}
+
+.tm-carousel article h4::after {
+    content: "”";
+    top: 55%;
+    right: -70%;
+}
+
+
+
+.active-testimonial {
+    transform: scale(1.3);
+    filter: blur(0) !important;
+    color: black;
+    background-color: var(--color-light2) !important;
+}
+
+.active-testimonial p {
+    color: var(--color-secondary) !important;
+    width: 350px !important;
+    font-size: 0.8rem !important;
+}
+
+.active-testimonial h4 {
+    color: var(--color-primary) !important;
+}
+
+
+
 
 /*
 !PENDING:
-- outer link icon in all buttons, buttons are together in a row
-- donation line having amount with student name and roll no.
 - feedback is like gallary, but auto slides.
-- A good font for paras ask content team.   
+- A good font for paras ask content team. 
+- links of collab parties  
 */
 
 /* =============================== Activity-1 =============================== */
 
-#trip-1 {
-    /* background-color: var(--color-secondary); */
+#trip-1 h1::after {
+    content: "#1";
 }
 
-#trip-1 .collab {
-    
-}
 
 #aau h3::after{
     content: "";
 }
 
-.synapse {
-    width: 300px;
+
+/* =============================== Activity-2 =============================== */
+
+
+#trip-2 h1::after {
+    content: "#2";
 }
 
-.synapse h3::after {
-    content: "The Socio-Linguistic Society";
-}
-
-.boundless h3::after {
-    content: "The Travel Club";
-}
 
 /* =============================== Animations =============================== */
 
