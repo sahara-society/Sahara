@@ -1,5 +1,5 @@
 @import url(./style.css);
-
+/* @import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700;800&display=swap'); */
 main {
     width: 100%;
     height: fit-content;
@@ -24,7 +24,7 @@ section h1 {
     z-index: 1;
 }
 section h1::after {
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-size: 160%;
     color: var(--color-offwhite);
     position: absolute;
@@ -99,7 +99,7 @@ section h1::after {
     width: 620px;
     margin-top: 1rem;
     text-align: left;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 400;
 }
 
@@ -215,7 +215,7 @@ section h1::after {
 
 #goals article p {
     padding: 1.8rem;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     text-align: justify;
@@ -304,7 +304,7 @@ section h1::after {
 
 #activity-container article p {
     padding: 0 2rem 1.5rem 3rem;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: 800;
     color: var(--color-light2);
 }

@@ -1,6 +1,4 @@
 @import url(./style.css);
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Quicksand:wght@500;600;800;900;1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Lexend:wght@500;600&display=swap');
 
 /* ============================== Main ============================== */
 main {
@@ -81,23 +79,25 @@ main {
 #heading h2 {
     position: relative;
     width: fit-content;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-size: 3rem;
+    font-weight: 600;
     color: var(--color-light1);
     opacity: 0;
     animation: fade-out 1s linear 1s forwards;
 }
 
+
 #heading h2::after {
     content: "";
     position: absolute;
-    left: 2%;
-    bottom: 7%;
+    left: 1.5%;
+    bottom: 12%;
     display: inline-block;
     width: 0;
-    height: 6px;
+    height: 4px;
     background-color: var(--color-light2);
-    border-radius: 2px;
+    border-radius: 0 0 2px 2px;
     animation: line-out 1s ease-out 1s forwards;
 }
 
@@ -111,7 +111,7 @@ main {
     font-weight: bold;
 }
 
-#intro p {
+#intro p, #intro blockquote {
     position: relative;
     width: inherit;
     bottom: -50px;
@@ -120,15 +120,24 @@ main {
 
 #intro #first {
     animation: go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 300;
+    line-height: 1.5rem;
+    /* font-family: 'Hind Vadodara', sans-serif; */
 }
 
 #intro #second {
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: normal;
-    color: var(--color-light2);
+    color: var(--color-light1);
     opacity: 0;
     margin-top: 0.5rem;
     animation: go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+}
+
+#second strong {
+    color: var(--color-light2);
+    font-weight: 600;
 }
 
 #intro a {
@@ -196,7 +205,7 @@ button a {
     bottom: 0;
     width: 190px;
     height: 50px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     background-color: var(--color-secondary);
     color: var(--color-light2);
     font-size: 0.9rem;
@@ -255,7 +264,7 @@ button:active {
         width: 0;
     }
     100% {
-        width: 94.5%;
+        width: 94%;
     }
 }
 

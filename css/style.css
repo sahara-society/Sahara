@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700;800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -12,27 +12,26 @@
 }
 
 a {
-    all:unset;
+    all: unset;
     cursor: pointer;
 }
 
 :root {
     /* Variables */
     --transition-300ms: all 0.3s ease;
-    --color-primary: #2B124C;
-    --color-secondary: #522B5B;
-    --color-light1: #854F6C;
-    --color-light2: #DFB6B2;
+    --color-primary: #2b124c;
+    --color-secondary: #522b5b;
+    --color-light1: #854f6c;
+    --color-light2: #dfb6b2;
     --color-dark: #190019;
-    --color-offwhite: #FBE4D8;
+    --color-offwhite: #fbe4d8;
 
-    --color-success: #1DC690;
-    --color-danger: #E53119;
+    --color-success: #1dc690;
+    --color-danger: #e53119;
 
     --color-black: #000000;
     --color-white: #ffffff;
 }
-
 
 /* ============================== Header ============================== */
 header {
@@ -46,7 +45,7 @@ header {
     height: 7rem;
     background-color: var(--color-primary);
     color: var(--color-light2);
-    font-family: 'Bree Serif', serif;
+    font-family: "Bree Serif", serif;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -60,7 +59,6 @@ header {
     height: 5.5rem;
     background-color: var(--color-secondary);
     box-shadow: 0 0 10px 4px rgba(44, 24, 63, 0.699);
-
 }
 
 #navigation > a {
@@ -84,7 +82,6 @@ img.shrink-on-scroll {
     height: 45px !important;
 }
 
-
 #name {
     margin-left: 10px;
 }
@@ -96,7 +93,7 @@ img.shrink-on-scroll {
     gap: 6rem;
     height: 100%;
     transition: var(--transition-300ms);
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: "Hind Vadodara", sans-serif;
 }
 
 #nav-menu li {
@@ -152,7 +149,6 @@ img.shrink-on-scroll {
     top: -31px;
 }
 
-
 @keyframes expand-line {
     0% {
         left: 50%;
@@ -186,8 +182,6 @@ img.shrink-on-scroll {
     }
 }
 
-
-
 /* ============================== Footer ============================== */
 footer {
     position: relative;
@@ -197,20 +191,21 @@ footer {
     padding: 20px 10rem 0 10rem;
     background-color: var(--color-primary);
     color: var(--color-light1);
-    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: "Hind Vadodara", sans-serif;
     font-size: 1rem;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 80% 20%;
-    grid-template-areas: "soc-details sitemap imp-links contact"
-                          "credits credits credits credits"; 
-
+    grid-template-areas:
+        "soc-details sitemap imp-links contact"
+        "credits credits credits credits";
 }
 
-footer h2, footer h3 {
+footer h2,
+footer h3 {
     color: var(--color-light2);
-    font-family: 'Bree Serif', serif !important;
+    font-family: "Bree Serif", serif !important;
     font-size: 1.5rem;
     font-weight: normal;
 }
@@ -242,7 +237,6 @@ footer a:hover {
     width: 60px;
 }
 
-
 article span {
     font-size: 0.8rem;
 }
@@ -267,7 +261,6 @@ article span {
 button:hover .icon-hidden {
     opacity: 100%;
 }
-
 
 #soc-details button a {
     width: 100%;
@@ -353,7 +346,6 @@ button:hover .icon-hidden {
     font-size: 1rem;
 }
 
-
 #contact input[type="email"] {
     width: 0;
 }
@@ -390,7 +382,7 @@ button:hover .icon-hidden {
 }
 
 /* ============================== Width: 1240px ============================== */
-@media screen and (max-width:1240px) {
+@media screen and (max-width: 1240px) {
     /* =============== Header =============== */
     #logo {
         margin: 0;

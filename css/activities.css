@@ -76,7 +76,7 @@ section h1::after {
 
 #intro p {
     width: 60%;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-size: 1rem;
     font-weight: 800;
     margin-top: -1rem;
@@ -107,7 +107,7 @@ section h1::after {
     opacity: 0;
     padding-top: 10px;
     position: relative;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: bold;
     font-size: 0.8rem;
     transition: opacity 300ms ease-in-out;
@@ -194,7 +194,7 @@ section h1::after {
 
 .parties h3::after {
     content: "";
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: bold;
     font-size: 60%;
     position: absolute;
@@ -288,7 +288,7 @@ section h1::after {
 }
 
 .route .loc {
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-size: 1.2rem;
     color: var(--color-light2);
 }
@@ -349,7 +349,7 @@ section h1::after {
 .activity-about p {
     grid-area: des;
     text-align: left;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: bold;
 }
 
@@ -382,7 +382,7 @@ section h1::after {
     height: 70px;
     border-radius: 10px;
     color: var(--color-light1);
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: bold;
     font-size: 1.15rem;
     cursor: pointer;
@@ -456,9 +456,11 @@ section h1::after {
     position: relative;
 }
 
-.tm-carousel article p {
+.tm-carousel article blockquote {
     width: 200px;
-    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-family: 'Hind Vadodara', sans-serif;
+    font-family: 'Mukta';
+    font-family: 'Hind Vadodara', sans-serif;
     font-weight: bolder;
     text-align: center;
     font-size: 0.5rem;
@@ -486,8 +488,6 @@ section h1::after {
     right: -70%;
 }
 
-
-
 .active-testimonial {
     transform: scale(1.3);
     filter: blur(0) !important;
@@ -495,7 +495,7 @@ section h1::after {
     background-color: var(--color-light2) !important;
 }
 
-.active-testimonial p {
+.active-testimonial blockquote {
     color: var(--color-secondary) !important;
     width: 350px !important;
     font-size: 0.8rem !important;

@@ -44,6 +44,9 @@ function updateTestimonial(actCarousel) {
     */
     let i;
     let testCarousel = document.getElementsByClassName(actCarousel)[0];
+    if (!testCarousel) {
+        return;
+    }
     let testimonials = Array.from(testCarousel.getElementsByTagName("article"));
     let nodes = testimonials.splice(0, 2);
     let firstNode = nodes[0];
