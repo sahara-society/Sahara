@@ -476,10 +476,11 @@ section h1::after {
     content: "“";
     color: var(--color-secondary);
     font-size: 100px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     opacity: 0.2;
     top: 0;
     left: 5%;
+    z-index: -1;
 }
 
 .tm-carousel article h4::after {
