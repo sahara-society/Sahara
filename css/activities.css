@@ -383,7 +383,7 @@ section h1::after {
     border-radius: 10px;
     color: var(--color-light1);
     font-family: 'Hind Vadodara', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.15rem;
     cursor: pointer;
     transition: all 300ms ease-in-out;
@@ -399,11 +399,11 @@ section h1::after {
     color: var(--color-light2);
     font-size: 1.2rem;
 
-    background: rgb(82,43,91);
-    background: -moz-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
-    background: -webkit-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
-    background: linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
+    background: rgb(133,79,108);
+    background: -moz-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: -webkit-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1); 
 }
 
 .activity-about button i {
@@ -412,6 +412,8 @@ section h1::after {
 
 #don-link {
     font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-secondary);
     background: var(--color-success);
 }
 

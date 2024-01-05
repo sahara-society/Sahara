@@ -2,6 +2,238 @@
 
 main {
     width: 100%;
-    height: 150vh;
-    background-color: var(--color-offwhite);
+    height: fit-content;
+    padding-top: 1rem;
+    position: relative;
+    text-align: center;
+    background-color: var(--color-primary);
+    background-size: cover;
+    font-family: "Bree Serif", serif;
+    color: var(--color-light2);
+}
+
+main section {
+    width: 100%;
+    height: 1000px;
+    padding: 6rem 11rem;
+}
+
+section h1 {
+    font-size: 5rem;
+    position: relative;
+    z-index: 1;
+    animation: scale-out 1s ease-out forwards;
+    transform: scale(0.7);
+}
+
+section h1::after {
+    font-family: "Bree Serif", serif;
+    font-size: 250%;
+    color: var(--color-offwhite);
+    position: absolute;
+    top: -100%;
+    left: 42%;
+    opacity: 0;
+    z-index: -1;
+    animation: fade-out 500ms ease-in 1.3s forwards;
+}
+
+/* =============================== INTRO =============================== */
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(82,43,91);
+    background: -moz-radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 25%);
+    background: -webkit-radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 25%);
+    background: radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 25%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
+}
+
+#ppl-img {
+    width: 600px;
+}
+
+#intro #sub-heading {
+    margin: -1rem 0 1rem 0;
+    font-family: "Hind Vadodara", sans-serif;
+    color: var(--color-light1);
+}
+
+#intro #tagline {
+    margin-top: 1rem;
+}
+
+#tagline span {
+    font-size: 2.5rem;
+}
+
+
+/* =============================== INTRO =============================== */
+#team {
+    height: fit-content;
+    padding-top: 8rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        ". head1 head2 ."
+        "member-1 member-2 member-3 member-4"
+        "member-5 member-6 member-7 member-8"
+        "member-9 member-10 member-11 member-12";
+    gap: 5rem 3rem;
+}
+
+#team article {
+    background-color: var(--color-light1);
+    height: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+
+    background: rgb(82,43,91);
+    background: -moz-radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);
+}
+
+#team article:hover {
+    box-shadow: 0 0 20px 0 #854f6c83;
+    transform: translateY(10px) scale(1.07);
+
+    background: rgb(82,43,91);
+    background: -moz-radial-gradient(circle, rgba(82,43,91,1) 15%, rgba(43,18,76,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(82,43,91,1) 15%, rgba(43,18,76,1) 100%);
+    background: radial-gradient(circle, rgba(82,43,91,1) 15%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
+}
+
+
+#team article figure {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+#team article figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter:grayscale(1) drop-shadow(0 0 5px var(--color-light1));
+}
+
+#team article:hover figure img {
+    filter: drop-shadow(0 0 10px var(--color-light1));
+}
+
+
+#team article h2 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+#team article:hover h2 {
+    color: var(--color-offwhite);
+}
+
+#team article h3 {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+#team article p {
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    text-align: justify;
+    padding: 0 1rem;
+    color: var(--color-light1);
+}
+
+#team article:hover p {
+    color: var(--color-light2);
+}
+
+#team article button {
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    color: var(--color-offwhite);
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+
+    background: rgb(82,43,91);
+    background: -moz-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: -webkit-linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    background: linear-gradient(292deg, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
+}
+
+#team article button:hover {
+    color: var(--color-light2);
+    
+    background: rgb(133,79,108);
+    background: -moz-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: -webkit-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1); 
+
+
+}
+
+#team article:hover button {
+    margin-top: 0;
+}
+
+#team article .member-links {
+    width: calc(100% + 4rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.5rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+#team article:hover .member-links {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 700ms ease-out;
+    
+}
+
+#team article .member-links a {
+    padding: 10px 1rem;
+
+}
+
+#team article .member-links a:hover {
+    color: var(--color-offwhite);
+    opacity: 1;
+}
+
+#team article .member-links a:nth-child(1) {
+    border-radius: 0 0 0 20px;
+}
+
+#team article .member-links a:nth-child(3) {
+    border-radius: 0 0 20px 0;
+}
+
+#founder-1 {
+    grid-area: head1;
+}
+
+#founder-2 {
+    grid-area: head2;
 }

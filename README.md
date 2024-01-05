@@ -17,25 +17,38 @@ This is the official website of Sahara society. It is a social welfare society o
 ## Features
 
 -   [x] **Home Page**
--   [ ] **About Us**
--   [ ] **Activities**
+-   [x] **About Us**
+-   [x] **Activities**
 -   [ ] **Events**
--   [ ] **Our Team**
+-   [x] **Our Team**
 -   [ ] **Contact**
 
 ### Tasks
 - [x] **Color Theme**
 - [x] **Footer**
 - [x] **Icons**
-- [ ] **LinkedIn link**
-- [ ] **Font**
+- [ ] **Button anchor link full**
+- [x] **LinkedIn link**
+- [x] **Font**
 - [ ] **Illustrations**
 - [ ] **Responsiveness**
 - [ ] **Mail service for contact**
-- [ ] Activities & Events will have carousel
-- [ ] Activities border left
-- [ ]  Activities text left
-- [ ] Animations left
+- [ ] **Activities & Events will have carousel**
+- [x] **Activities border left**
+- [ ] **Animations left**
+- [ ] **Images for About**
+- [ ] **Images for Activities**
+- [ ] **Images for Events**
+- [ ] **Profile details of Team**
+- [ ] **Arrow after intro of About, Activities, Our Team**
+
+
+#### Text left
+- [ ] What we do in about
+- [ ] Social Activities heading
+- [ ] Description of each activity
+- [ ] Bullets of each activity
+- [ ] Testimonials of each activity
 
 ## Project Structure
 
