@@ -42,6 +42,7 @@ This is the official website of Sahara society. It is a social welfare society o
 - [ ] **Profile details of Team**
 - [ ] **Arrow after intro of About, Activities, Our Team**
 
+Sahara society [details](https://docs.google.com/document/d/1drGVoKkkfh10SDM7KmOImB4YgmmDTpI6uM_bUcFdoPI/edit?pli=1)
 
 #### Text left
 - [ ] What we do in about

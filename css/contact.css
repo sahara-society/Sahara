@@ -1,105 +1,39 @@
+@import url(./style.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Hind+Siliguri:wght@300&family=Nanum+Gothic&family=Noto+Sans:wght@200&family=Poppins:wght@500&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "poppins";
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.container{
+main {
+    width: 100%;
+    height: fit-content;
+    padding-top: 1rem;
     position: relative;
+    text-align: center;
+    background-color: var(--color-primary);
+    background-size: cover;
+    font-family: "Bree Serif", serif;
+    color: var(--color-light2);
+}
+
+main section {
     width: 100%;
-    height: 100vh;
-    background: #8f50ec;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    height: 1000px;
+    padding: 6rem 11rem;
 }
 
-.item{
-    width: 100%;
-    height: 550px;
-    max-width: 820px;
-    border: #ffff;
-    border-radius: 20px;
-    box-shadow: 0 0 20px 10px rgba(0,0,0,.4);
-    overflow: hidden;
-    grid-template-columns: repeat(2, 1rf);
-    display: grid;
-    z-index: 1000;
+section h1 {
+    font-size: 5rem;
+    position: relative;
+    z-index: 1;
+    animation: scale-out 1s ease-out forwards;
+    transform: scale(0.7);
 }
 
-.contact{
-    background: #ffffff;
+section h1::after {
+    font-family: "Bree Serif", serif;
+    font-size: 250%;
+    color: var(--color-offwhite);
+    position: absolute;
+    top: -100%;
+    left: 42%;
+    opacity: 0;
+    z-index: -1;
+    animation: fade-out 500ms ease-in 1.3s forwards;
 }
-
-.submit-form{
-    background: red;
-}
-
-.first-text{
-    padding-left: 20px;
-    padding-top: 20px;
-    font-size: 35px;
-    color: #8550ec;
-    font-weight: 600;
-}
-
-.image{
-    height: 320px;
-    width: 320px;
-}
-.social-media{
-    display: flex;
-    list-style:none ;
-}
-.social-media i{
-    background: #8550ec;
-    padding: 5px;
-    border-radius:5px;
-}
-.social-media ul li{
-    padding-left: 15px;
-    font-size: 24px;
-    margin-top: 10px;
-}
-.social-media i:hover{
-    background: #ffff;
-    color: #8550ec;
-}
-.social-media a{
-    text-decoration: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
