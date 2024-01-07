@@ -12,21 +12,28 @@ main {
     color: var(--color-light2);
 }
 
-main section {
+main {
     width: 100%;
-    height: 1000px;
-    padding: 6rem 11rem;
+    height: fit-content;
+    padding: 7rem 11rem;
+
+    background-color: var(--color-primary);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    background: linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 }
 
-section h1 {
+main h1 {
     font-size: 5rem;
     position: relative;
     z-index: 1;
     animation: scale-out 1s ease-out forwards;
     transform: scale(0.7);
+    color: var(--color-offwhite);
 }
 
-section h1::after {
+main h1::after {
     font-family: "Bree Serif", serif;
     font-size: 250%;
     color: var(--color-offwhite);
@@ -37,3 +44,116 @@ section h1::after {
     z-index: -1;
     animation: fade-out 500ms ease-in 1.3s forwards;
 }
+
+main h2 {
+    font-size: 2rem;
+    font-family: "Hind Vadodara", sans-serif;
+}
+
+/* =============================== Contact =============================== */
+
+main section {
+    width: 100%;
+    height: 600px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    /* align-items: center; */
+    /* background-color: blue; */
+}
+
+figure {
+    width: 600px;
+    height: fit-content;
+    /* background-color: red; */
+    display: block;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+}
+
+section #contact-form {
+    height: fit-content;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: left;
+}
+
+#contact-form input, textarea, select {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: var(--color-offwhite);
+}
+
+select option {
+    background: var(--color-light2);
+}
+
+
+#contact-form input:focus, textarea:focus, select:focus {
+    background-color: var(--color-white);
+}
+
+#contact-form h2, textarea, form div {
+    grid-column: 1 / 3;
+}
+
+
+#contact-form > *::placeholder {
+    color: var(--color-dark);
+    font-weight: 500;
+    opacity: 1;
+
+}
+
+#contact-form h2 {
+    color: var(--color-light1);
+}
+
+#contact-form:hover h2 {
+    color: var(--color-light2);
+}
+
+#fname {
+    grid-area: "fname";
+}
+
+#lname {
+    grid-area: "lname";
+}
+
+#email {
+    grid-area: "email";
+}
+
+#identity {
+    grid-area: "identity";
+}
+
+#purpose {
+    grid-area: "purpose";
+    grid-column: 1/2;
+}
+
+#desc {
+    grid-area: "message";
+    width: 100%;
+    font-size: 0.9rem;
+    resize: none;
+}
+
+form div {
+    grid-area: "submit";
+}
+
+div button {
+
+}
+

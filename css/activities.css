@@ -50,10 +50,10 @@ section h1::after {
     row-gap: 2rem;
 
     background-color: var(--color-primary);
-    /* background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
     background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
     background: linear-gradient(0deg, rgba(43,18,76,1) 60%, rgba(82,43,91,1) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1); */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 
 }
 

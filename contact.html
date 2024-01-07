@@ -36,23 +36,39 @@
 
     </header>
     <main>
-        <h1>Want to Collaborate with Us ?</h1>
+        <h1>Let's Make a Difference Together!</h1>
         <section>
             <figure>
                 <img src="./images/contact-us.png" alt="contact us">
             </figure>
-            <form action="get">
-                <input type="text" name="Full name" id="name" placeholder="Full name" required>
+            <form action="get" id="contact-form">
+                <h2>Get in Touch with Us</h2>
+                <input type="text" name="First name" id="fname" placeholder="First name" required>
+                <input type="text" name="Last name" id="lname" placeholder="Last name" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
-                <select name="identity" id="identity">
-                    <option value="You are?" disabled selected>You are?</option>
+                <select name="Identity" id="identity">
+                    <option value="You are?" disabled selected>Identify Yourself as</option>
+                    <option value="Student">Individual</option>
                     <option value="Student">Student</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Influencer">Influencer</option>
                     <option value="Organization">Organization</option>
                     <option value="Social Activist">Social Activist</option>
-                    <option value="Influencer">Influencer</option>
                 </select>
-                <textarea name="desc" id="desc" cols="80" rows="10" placeholder="What we can do for you?"></textarea>
-                <input type="submit" value="Send">
+                <select name="Purpose" id="purpose">
+                    <option value="Purpose" disabled selected>Please Share Your Purpose</option>
+                    <option value="Volunteer">Volunteer</option>
+                    <option value="Event Suggestion">Event Suggestion</option>
+                    <option value="Collaboration">Collaboration</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                    <option value="Social Activity Participation">Social Activity Participation</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea name="desc" id="desc" cols="80" rows="7" placeholder="What we can do for you?" ></textarea>
+                <div>
+                    <input type="submit" value="Send">
+                </div>
             </form>
         </section>
     </main>

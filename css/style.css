@@ -21,10 +21,10 @@ a {
     --transition-300ms: all 0.3s ease;
     --color-primary: #2b124c;
     --color-secondary: #522b5b;
-    --color-light1: #   ;
+    --color-light1: #854f6c;
     --color-light2: #dfb6b2;
     --color-dark: #190019;
-    --color-golden: #fada89;
+    --color-golden: #FFD700;
     --color-offwhite: #fbe4d8;
 
     --color-success: #1dc690;
@@ -105,6 +105,7 @@ img.shrink-on-scroll {
     font-weight: bold;
     font-size: 1.1rem;
     position: relative;
+    color: var(--color-light2);
     transition: var(--transition-300ms);
 }
 
