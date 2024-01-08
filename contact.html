@@ -41,9 +41,9 @@
             <figure>
                 <img src="./images/contact-us.png" alt="contact us">
             </figure>
-            <form action="get" id="contact-form">
+            <form method="POST" action="https://getform.io/f/3401397e-3320-4a68-b7ea-cc41a99b2edf" id="contact-form">
                 <h2>Get in Touch with Us</h2>
-                <input type="text" name="First name" id="fname" placeholder="First name" required>
+                <input type="text" name="name" id="fname" placeholder="First name" required>
                 <input type="text" name="Last name" id="lname" placeholder="Last name" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <select name="Identity" id="identity">
@@ -58,6 +58,7 @@
                 <select name="Purpose" id="purpose">
                     <option value="Purpose" disabled selected>Please Share Your Purpose</option>
                     <option value="Volunteer">Volunteer</option>
+                    <option value="Join Core Team">Join Core Team</option>
                     <option value="Event Suggestion">Event Suggestion</option>
                     <option value="Collaboration">Collaboration</option>
                     <option value="Sponsorship">Sponsorship</option>
@@ -65,9 +66,9 @@
                     <option value="Feedback">Feedback</option>
                     <option value="Other">Other</option>
                 </select>
-                <textarea name="desc" id="desc" cols="80" rows="7" placeholder="What we can do for you?" ></textarea>
+                <textarea name="message" id="desc" cols="80" rows="7" placeholder="What we can do for you?" ></textarea>
                 <div>
-                    <input type="submit" value="Send">
+                    <input id="submit-btn" type="submit" value="Submit Request">
                 </div>
             </form>
         </section>

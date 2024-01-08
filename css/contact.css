@@ -54,13 +54,11 @@ main h2 {
 
 main section {
     width: 100%;
-    height: 600px;
-    margin-top: 2rem;
+    height: 500px;
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
-    /* align-items: center; */
-    /* background-color: blue; */
 }
 
 figure {
@@ -153,7 +151,22 @@ form div {
     grid-area: "submit";
 }
 
-div button {
-
+#contact-form #submit-btn {
+    padding: 1rem 2rem;
+    color: var(--color-light2);
+    background-color: var(--color-secondary);
+    cursor: pointer;
 }
 
+#contact-form #submit-btn:hover {
+    color: var(--color-offwhite);
+    background: rgb(133,79,108);
+    background: -moz-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: -webkit-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1); 
+}
+
+#contact-form #submit-btn:active {
+    transform: scale(0.95);
+}
