@@ -227,6 +227,8 @@ footer h3 {
 }
 footer h3 {
     font-size: 1.3rem;
+    font-family: "Hind Vadodara", sans-serif !important;
+    font-weight: 600;
 }
 
 footer nav ul {
@@ -324,9 +326,11 @@ button:hover .icon-hidden {
     grid-area: "contact";
 }
 
-#contact ul {
-    width: 120%;
-    padding-left: 120px;
+#contact #social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact li {
@@ -336,6 +340,7 @@ button:hover .icon-hidden {
 #contact li i {
     font-size: 1.2rem;
     color: var(--color-light2);
+    margin-left: 30px;
 }
 
 #contact li address {
