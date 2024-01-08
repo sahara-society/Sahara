@@ -38,7 +38,7 @@ section h1::after {
 /* ============================== About ============================== */
 
 #about {
-    height: 800px;
+    height: 1000px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: var(--color-primary);

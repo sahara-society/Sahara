@@ -170,3 +170,89 @@ form div {
 #contact-form #submit-btn:active {
     transform: scale(0.95);
 }
+
+/* =============================== Responsiveness =============================== */
+@media screen and (max-width: 1600px) {
+    main {
+        padding: 7rem 5rem;
+    }
+    main section {
+        margin: 0;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    section {
+        align-items: center;
+    }
+    section #contact-form {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 7rem 2rem;
+    }
+    main h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section figure {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main h1 {
+        font-size: 3rem;
+    }
+    main section {
+        height: 600px;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section #contact-form {
+        height: 600px;
+        /* background-color: orange; */
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    #contact-form h2, textarea, form div {
+        grid-column: 1 / 1;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main h1 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 1.2rem;
+    }
+
+    main section {
+        height: 500px;
+    }
+
+    section #contact-form {
+        height: 500px;
+    }
+
+    #contact-form input, textarea, select {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    textarea {
+        font-size: 0.7rem !important;
+    }
+}
