@@ -94,6 +94,7 @@ section h1::after {
     align-items: center;
     position: relative;
     border-radius: 20px;
+    cursor: pointer;
 
     background: rgb(82,43,91);
     background: -moz-radial-gradient(circle, rgba(82,43,91,1) 0%, rgba(43,18,76,1) 100%);
@@ -102,7 +103,7 @@ section h1::after {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1);
 }
 
-#team article:hover {
+#team article:hover, #team article:active {
     box-shadow: 0 0 20px 0 #854f6c83;
     transform: translateY(10px) scale(1.07);
 
@@ -128,7 +129,7 @@ section h1::after {
     filter:grayscale(1) drop-shadow(0 0 5px var(--color-light1));
 }
 
-#team article:hover figure img {
+#team article:hover figure img, #team article:active figure img  {
     filter: drop-shadow(0 0 10px var(--color-light1));
 }
 
@@ -138,7 +139,7 @@ section h1::after {
     margin-top: 1rem;
 }
 
-#team article:hover h2 {
+#team article:hover h2, #team article:active h2 {
     color: var(--color-offwhite);
 }
 
@@ -158,7 +159,7 @@ section h1::after {
     color: var(--color-light1);
 }
 
-#team article:hover p {
+#team article:hover p, #team article:active p {
     color: var(--color-light2);
 }
 
@@ -205,11 +206,10 @@ section h1::after {
     transform: translateY(8px);
 }
 
-#team article:hover .member-links {
+#team article:hover .member-links, #team article:active .member-links {
     opacity: 1;
     transform: translateY(0);
     transition: all 700ms ease-out;
-    
 }
 
 #team article .member-links a {
@@ -236,4 +236,199 @@ section h1::after {
 
 #founder-2 {
     grid-area: head2;
+}
+
+/* =============================== Responsiveness =============================== */
+@media screen and (max-width: 1600px) {
+    main section {
+        padding: 7rem 5rem;
+    }
+    #team article button {
+        margin-top: 0;
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #team article .member-links {
+        font-size: 1.2rem;
+    }
+
+    #team article:hover .member-links, #team article:active .member-links {
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main h1 {
+        font-size: 4rem;
+    }
+    #intro {
+        height: 700px;
+    }
+    #intro figure {
+        width: 400px;
+        height: 400px;
+    }
+    #tagline {
+        font-size: 1rem;
+    }
+    #tagline span {
+        font-size: 1.5rem;
+    }
+
+    #team {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "head1 head2 member-1"
+            "member-2 member-3 member-4"
+            "member-5 member-6 member-7"
+            "member-8 member-9 member-10";
+    }
+
+    #space-div1, #space-div2 {
+        display: none;
+    }
+
+    #team article {
+        height: 450px;
+    }
+    #team article figure {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #team article p {
+        font-size: 0.7rem;
+        margin: 0.5rem;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #team {
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "head1 head2"
+            "member-1 member-2"
+            "member-3 member-4"
+            "member-5 member-6"
+            "member-7 member-8"
+            "member-9 member-10";
+    }
+    #team article {
+        height: 400px;
+    }
+
+    #team article h2 {
+        margin-top: 0;
+    }
+    #team article h3 {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    main h1 {
+        font-size: 2rem;
+    }
+    #sub-heading {
+        font-size: 1rem;
+    }
+    #intro {
+        height: 700px;
+    }
+    #intro figure {
+        width: 300px;
+        height: 300px;
+    }
+    #tagline {
+        font-size: 0.8rem;
+    }
+    #tagline span {
+        font-size: 1rem;
+    }
+
+    #team {
+        padding: 0 6rem;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "head1"
+            "head2"
+            "member-1"
+            "member-2"
+            "member-3"
+            "member-4"
+            "member-5"
+            "member-6"
+            "member-7"
+            "member-8"
+            "member-9"
+            "member-10";
+        gap: 2rem;
+    }
+    #team article {
+        height: 320px;
+    }
+    #team article figure {
+        width: 80px;
+        height: 80px;
+    }
+
+    #team article h2 {
+        font-size: 1rem;
+    }
+    #team article h3, #team article button {
+        font-size: 0.8rem;
+    }
+    #team article p {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #team {
+        padding: 0 3.5rem;
+    }
+    #team article figure {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #intro {
+        height: 600px;
+    }
+    #intro h1 {
+        line-height: 100%;
+    }
+    #sub-heading {
+        line-height: 1rem;
+        padding-top: 1rem;
+    }
+    #intro figure {
+        width: 150px;
+        height: 150px;
+    }
+
+    #team {
+        padding: 0 2.5rem;
+    }
+    #team article {
+        padding: 1rem 2rem;
+        height: 330px;
+    }
+    #team article h2 {
+        font-size: 0.8rem;
+    }
+    #team article h3, #team article button {
+        font-size: 0.7rem;
+    }
 }
