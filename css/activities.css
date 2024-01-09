@@ -452,7 +452,7 @@ section h1::after {
     background-color: var(--color-light1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     border-radius: 10px;
     filter: blur(2px);
     position: relative;
@@ -501,6 +501,7 @@ section h1::after {
 .active-testimonial blockquote {
     color: var(--color-secondary) !important;
     width: 350px !important;
+    font-weight: 600 !important;
     font-size: 0.8rem !important;
 }
 

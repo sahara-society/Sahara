@@ -156,11 +156,11 @@ section h1::after {
     margin: 1rem 0;
     text-align: justify;
     padding: 0 1rem;
-    color: var(--color-light1);
+    color: var(--color-light2);
 }
 
 #team article:hover p, #team article:active p {
-    color: var(--color-light2);
+    color: var(--color-offwhite);
 }
 
 #team article button {
@@ -198,8 +198,9 @@ section h1::after {
 
 #team article .member-links {
     width: calc(100% + 4rem);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     font-size: 1.5rem;
     position: relative;
     opacity: 0;
@@ -217,9 +218,11 @@ section h1::after {
 
 }
 
-#team article .member-links a:hover {
+#team article .member-links a:hover, #team article .member-links a:active {
     color: var(--color-offwhite);
     opacity: 1;
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 #team article .member-links a:nth-child(1) {
