@@ -21,7 +21,7 @@ This is the official website of Sahara society. It is a social welfare society o
 -   [x] **Activities**
 -   [ ] **Events**
 -   [x] **Our Team**
--   [ ] **Contact**
+-   [x] **Contact**
 
 ### Tasks
 - [x] **Color Theme**

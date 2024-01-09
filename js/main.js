@@ -10,7 +10,40 @@ window.addEventListener("scroll", () =>{
     document.querySelector("#navigation").classList.toggle("on-scroll",window.scrollY > 0);
     document.querySelector("#logo img").classList.toggle("shrink-on-scroll", window.scrollY > 0);
     document.querySelector("#current-page").classList.toggle("shrink-nav", window.scrollY > 0);
-})
+});
+
+
+let navigationItems = document.querySelector('#nav-menu');
+
+const hamburgerEvent = (navigation, close, open) => {
+    navigationItems.style.display = navigation;
+    closeHam.style.display = close;
+    openHam.style.display = open;
+};
+
+try {
+    let openHam = document.querySelector('#openHam');
+    let closeHam = document.querySelector('#closeHam');
+
+    if (window.innerWidth < 900) {
+        openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+        closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "flex"));
+    } else {
+        openHam.addEventListener('click', () => hamburgerEvent("flex", "block", "none"));
+        closeHam.addEventListener('click', () => hamburgerEvent("none", "none", "flex"));
+    }
+
+} catch (error) {
+    // hamburgerEvent("none", "none", "flex");
+    if (window.innerWidth > 900) {
+        navigationItems.style.display = "flex";
+    } else {
+        navigationItems.style.display = "none";
+    
+    }
+};
+
+
 
 // ================================ About ===============================
 let slideIndex = 0;
@@ -64,6 +97,4 @@ function updateTestimonial(actCarousel) {
     setTimeout(updateTestimonial, 7000, actCarousel);
 
     //!PENDING: dots are pending
-
-
 }
