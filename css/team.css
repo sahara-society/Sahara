@@ -291,15 +291,12 @@ section h1::after {
     }
 
     #team article {
-        height: 450px;
+        height: 420px;
     }
     #team article figure {
         width: 100px;
         height: 100px;
     }
-}
-
-@media screen and (max-width: 1024px) {
     #team article p {
         font-size: 0.7rem;
         margin: 0.5rem;
@@ -308,7 +305,7 @@ section h1::after {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     #team {
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(2, 1fr);
@@ -332,28 +329,10 @@ section h1::after {
     }
 }
 
-@media screen and (max-width: 500px) {
-
-    main h1 {
-        font-size: 2rem;
-    }
-    #sub-heading {
-        font-size: 1rem;
-    }
+@media screen and (max-width: 768px) {
     #intro {
-        height: 700px;
+        height: 800px;
     }
-    #intro figure {
-        width: 300px;
-        height: 300px;
-    }
-    #tagline {
-        font-size: 0.8rem;
-    }
-    #tagline span {
-        font-size: 1rem;
-    }
-
     #team {
         padding: 0 6rem;
         grid-template-rows: repeat(12, 1fr);
@@ -373,6 +352,34 @@ section h1::after {
             "member-10";
         gap: 2rem;
     }
+    #team article {
+        height: fit-content;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    main h1 {
+        font-size: 2rem;
+    }
+    #sub-heading {
+        font-size: 1rem;
+    }
+    #intro {
+        height: 600px;
+    }
+    #intro figure {
+        width: 300px;
+        height: 300px;
+    }
+    #tagline {
+        font-size: 0.8rem;
+    }
+    #tagline span {
+        font-size: 1rem;
+    }
+
     #team article {
         height: 320px;
     }

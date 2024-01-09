@@ -448,8 +448,10 @@ button:hover .icon-hidden {
     color: var(--color-light2);
 }
 
-#credits a:hover {
+#credits a:hover, #credits a:active {
     text-decoration: underline;
+    font-weight: bold;
+    color: var(--color-offwhite);
 }
 
 /* ============================== Responsivness ============================== */
