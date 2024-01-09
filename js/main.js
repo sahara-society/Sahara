@@ -95,6 +95,4 @@ function updateTestimonial(actCarousel) {
 
     testCarousel.getElementsByTagName("article")[1].classList.add("active-testimonial");
     setTimeout(updateTestimonial, 7000, actCarousel);
-
-    //!PENDING: dots are pending
 }
