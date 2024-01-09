@@ -122,33 +122,20 @@ section h1::after {
     opacity: 100%;
 }
 
-@keyframes scale-button {
-    0% {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-    75% {
-        opacity: 75%;
-        transform: scale(1.1);
-    }
-    100% {
-        opacity: 100%;
-        transform: scale(1);
-    }
-}
-
 #about figure {
     margin-top: 3rem;
+    width: 700px;
 }
 
-#about img {
-    width: 700px;
+#about figure img {
+    width: 100%;
 }
 
 /* ============================== Goals ============================== */
 
 #goals {
     height: 900px;
+
     background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(133,79,108,1) 10%, rgba(82,43,91,1) 67%, rgba(43,18,76,1) 97%);
     background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(133,79,108,1) 10%, rgba(82,43,91,1) 67%, rgba(43,18,76,1) 97%);
     background: linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(133,79,108,1) 10%, rgba(82,43,91,1) 67%, rgba(43,18,76,1) 97%);
@@ -223,12 +210,10 @@ section h1::after {
     padding: 60px 2rem 0 2rem !important;
 }
 
-#goals article:hover {
+#goals article:hover, #goals article:active {
     box-shadow: 0 0 200px 2px rgba(133, 79, 108, 0.329) inset,
                 0 0 30px 0 #854f6c83;
     color: var(--color-offwhite) !important;
-    /* perspective: 1000px; */
-    /* transform: perspective(1000px) rotateX(5deg) rotateY(5deg) ; */
 }
 
 #goals article:hover figure img {
@@ -239,7 +224,7 @@ section h1::after {
 /* ============================== Activities ============================== */
 
 #activities {
-    height: 180%;
+    height: fit-content;
     padding: 5rem;
     background: -moz-linear-gradient(0deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 12%, rgba(43,18,76,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(133,79,108,1) 3%, rgba(82,43,91,1) 10%, rgba(43,18,76,1) 100%);
@@ -287,7 +272,7 @@ section h1::after {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 }
 
-#activity-container article:hover {
+#activity-container article:hover, #activity-container article:active {
     background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
     background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
     background: linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
@@ -324,7 +309,7 @@ section h1::after {
     transition: 300ms bottom ease-out 150ms;
 }
 
-#activity-container article:hover button {
+#activity-container article:hover button, #activity-container article:active button {
     bottom: 40px;
     opacity: 100%;
     z-index: 5;
@@ -345,7 +330,7 @@ section h1::after {
     overflow: hidden;
 }
 
-#activity-container article:hover figure {
+#activity-container article:hover figure, #activity-container article:active figure {
     padding: 0;
     transform: scale(1.05);
     opacity: 0.5;
@@ -485,7 +470,7 @@ section h1::after {
     background: transparent;
 }
 
-article:hover #social-button {
+article:hover #social-button, article:active #social-button {
     opacity: 1;
 }
 
@@ -508,6 +493,21 @@ article:hover #social-button {
 
 
 /* ============================== Animations  ============================== */
+
+@keyframes scale-button {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
 
 @keyframes line-out {
     0% {
@@ -551,5 +551,305 @@ article:hover #social-button {
     }
     100% {
         opacity: 10%;
+    }
+}
+
+/* =============================== Responsiveness =============================== */
+@media screen and (max-width: 1600px) {
+    main section {
+        padding: 7rem 5rem;
+    }
+
+    #goals h1::after {
+        left: 31%;
+    }
+    #goal-container {
+        gap: 2rem;
+    }
+    #goals article {
+        width: 320px;
+    }
+
+    #activities h1::after {
+        left: 29.5%;
+    }
+    #outreach h1::after {
+        left: 32%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main section {
+        padding: 7rem 2rem;
+    }
+    #about figure {
+        width: 500px;
+        margin-top: 120px;
+    }
+
+    #goals {
+        height: 1500px;
+    }
+    #goals h1::after {
+        left: 28%;
+    }
+    #goal-container {
+        width: fit-content;
+        height: fit-content;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem 5rem;
+    }
+    #goals article {
+        width: 400px;
+        height: 570px;
+    }
+
+    #activities h1::after {
+        left: 22%;
+    }
+
+    #activity-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "act-1"
+        "act-2"
+        "act-3";
+        gap: 4rem 0;
+    }
+    #activity-container article {
+        width: 700px;
+        height: 530px !important;
+    }
+    #activity-container article button {
+        left: 250px;
+    }
+    #outreach h1::after {
+        left: 28%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #about {
+        overflow: hidden;
+    }
+    #about figure {
+        width: 400px;
+        margin-top: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #about {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    #about article {
+        align-items: center;
+    }
+    #about figure {
+        width: 500px;
+    }
+    #about article p {
+        text-align: center;
+    }
+
+    #goals {
+        height: fit-content;
+    }
+
+    #goals h1::after {
+        left: 17%;
+    }
+    #goal-container {
+        width: inherit;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    #goals article {
+        width: 500px;
+        height: 500px;
+    }
+    #goals article p {
+        text-align: center;
+    }
+
+    #activities h1::after {
+        left: 2%;
+    }
+    #activity-container article {
+        width: 600px !important;
+        height: 600px !important;
+    }
+    #activity-container article button {
+        left: 200px !important;
+    }
+
+    #outreach {
+        height: fit-content;
+    }
+    #outreach h1::after {
+        left: 19%;
+    }
+    #outreach #stats {
+        height: fit-content;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #about {
+        height: 900px;
+    }
+    #about figure {
+        width: 300px;
+    }
+    #about article p {
+        width: fit-content;
+        padding: 0 1rem;
+    }
+
+    #goals h1 {
+        font-size: 3rem;
+    }
+    #goals h1::after {
+        left: 9.5%;
+    }
+    #goals article {
+        width: 350px;
+        height: 550px;
+    }
+    #goals article figure {
+        height: 40%;
+    }
+
+    #activities h1 {
+        font-size: 3rem;
+    }
+    #activities h1::after {
+        font-size: 120%;
+        left: 0;
+        top: -30%;
+    }
+    #activity-container article {
+        width: 350px !important;
+        height: 450px !important;
+    }
+    #activity-container article h2 {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+    #activity-container article p {
+        font-size: 0.8rem;
+        padding: 0 1rem;
+        font-weight: 400;
+    }
+    #activity-container article button {
+        padding: 10px 30px;
+        font-size: 1rem;
+        left: 100px !important;
+    }
+    #outreach h1 {
+        font-size: 3rem;
+    }
+    #outreach h1::after {
+        left: 12%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section h1::after {
+        display: none;
+    }
+
+    #about h1 {
+        font-size: 4rem;
+    }
+    #about h3 {
+        font-size: 1.3rem;
+    }
+    #about h3::after {
+        display: none;
+    }
+    #about p {
+        font-size: 0.8rem;
+    }
+
+    #activities {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #about {
+        height: 800px;
+    }
+    #about h1 {
+        font-size: 3rem;
+    }
+    #about h2 {
+        font-size: 1.2rem;
+    }
+    #about h3 {
+        font-size: 1rem;
+    }
+    #about h3::after {
+        display: none;
+    }
+    #about p {
+        font-size: 0.6rem;
+    }
+    #about button {
+        width: 120px;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    #goals h1, #activities h1, #outreach h1 {
+        font-size: 2rem;
+    }
+
+    #goals article {
+        width: 250px;
+        height: 500px;
+    }
+    #goals article h2 {
+        font-size: 1rem;
+    }
+    #goals article p {
+        font-size: 0.7rem;
+    }
+
+    #activity-container article {
+        width: 280px !important;
+        height: 360px !important;
+    }
+    #activity-container article h2 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    #activity-container article p {
+        font-size: 0.6rem;
+    }
+    #activity-container article button {
+        padding: 10px 30px;
+        font-size: 0.8rem;
+        left: 80px !important;
+    }
+
+    #outreach article {
+        width: 250px;
+        height: 250px;
     }
 }

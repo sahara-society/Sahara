@@ -69,7 +69,7 @@ main {
     font-weight: bolder;
     letter-spacing: 0.5rem;
     line-height: 80%;
-    color: var(--color-offwhite);
+    color: var(--color-light2);
     position: relative;
     bottom: 0;
     opacity: 0;
@@ -172,14 +172,14 @@ main {
     height: 70px;
     font-size: 2rem;
     z-index: 2;
-    background-color: var(--color-offwhite);
+    background-color: var(--color-light2);
     color: var(--color-primary);
     border-radius: inherit;
     opacity: 0;
     animation: scale-button 1s ease-out 3.5s forwards;
 }
 
-#join-button:hover {
+#join-button:hover, #join-button:active, #join-button:focus {
     color: var(--color-light1);
     box-shadow: 0 0 50px 5px #854f6c83 inset;
 }
@@ -225,7 +225,7 @@ button a {
     box-shadow: 0 0 20px 20px rgba(218, 212, 218, 0.534) inset;
 }
 
-#buttons:hover #collab-button {
+#buttons:hover #collab-button, #buttons:active #collab-button, #buttons:focus #collab-button {
     display: block;
     transform: none !important;
 }
