@@ -313,3 +313,75 @@ button:active {
         bottom: -45px;
     }
 }
+
+/* ============================== Responsiveness ============================== */
+
+@media screen and (max-width: 500px) {
+    #heading h1 {
+        font-size: 5rem;
+        letter-spacing: 0.2rem;
+    }
+    #heading h2 {
+        font-size: 1.8rem;
+    }
+    #intro {
+        width: 100%;
+        padding: 2rem 2rem;
+    }
+    #intro {
+        font-size: 1rem;
+    }
+    #buttons {
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main {
+        padding-top: 3rem;
+    }
+    #heart {
+        width: 100px;
+        top: 35%;
+        left: 25%;
+    }
+    .hand {
+        width: 100px;
+    }
+    #hand-1 {
+        right: 25px;
+    }
+    #hand-2 {
+        left: 25px;
+    }
+
+    #heading h2::after {
+        height: 2px;
+    }
+
+    #buttons {
+        margin-top: 12rem;
+    }
+    #join-button {
+        width: 160px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #heading h1 {
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+    }
+    #heading h2 {
+        font-size: 1rem;
+    }
+    #intro, #intro #first {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    #buttons {
+        margin-top: 9rem;
+    }
+}
