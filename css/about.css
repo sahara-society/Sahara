@@ -100,6 +100,11 @@ section h1::after {
     font-weight: 400;
 }
 
+#about article p em {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 600;
+}
+
 #join-button {
     width: 180px;
     height: 70px;
@@ -646,16 +651,18 @@ article:hover #social-button, article:active #social-button {
         flex-direction: column-reverse;
         align-items: center;
         gap: 2rem;
+        margin-top: 3rem;
     }
 
     #about article {
         align-items: center;
     }
     #about figure {
-        width: 500px;
+        width: 450px;
     }
     #about article p {
         text-align: center;
+        padding: 0 1rem;
     }
 
     #goals {
@@ -711,6 +718,7 @@ article:hover #social-button, article:active #social-button {
 @media screen and (max-width: 500px) {
     #about {
         height: 900px;
+        margin-top: 7rem;
     }
     #about figure {
         width: 300px;

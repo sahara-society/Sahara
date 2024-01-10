@@ -528,9 +528,6 @@ button:hover .icon-hidden {
 }
 
 @media screen and (max-width: 500px) {
-    footer {
-        padding: 20px 1rem 100px 1rem;
-    }
     #hamburger {
         justify-content: center;
     }
@@ -539,5 +536,8 @@ button:hover .icon-hidden {
     }
     #openHam span {
         width: 25px;
+    }
+    footer {
+        padding: 20px 1rem 100px 1rem;
     }
 }

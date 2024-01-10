@@ -229,6 +229,9 @@ form div {
     #contact-form h2, textarea, form div {
         grid-column: 1 / 1;
     }
+    textarea {
+        min-height: 150px;
+    }
 }
 
 @media screen and (max-width: 320px) {
