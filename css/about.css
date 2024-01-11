@@ -597,16 +597,17 @@ article:hover #social-button, article:active #social-button {
 
     #activity-container {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
         "act-1"
         "act-2"
-        "act-3";
+        "act-3"
+        "act-4";
         gap: 4rem 0;
     }
     #activity-container article {
         width: 700px;
-        height: 530px !important;
+        height: 600px !important;
     }
     #activity-container article button {
         left: 250px;
@@ -674,7 +675,7 @@ article:hover #social-button, article:active #social-button {
     }
     #activity-container article {
         width: 600px !important;
-        height: 600px !important;
+        height: 650px !important;
     }
     #activity-container article button {
         left: 200px !important;
@@ -733,7 +734,7 @@ article:hover #social-button, article:active #social-button {
     }
     #activity-container article {
         width: 350px !important;
-        height: 450px !important;
+        height: 530px !important;
     }
     #activity-container article h2 {
         font-size: 1.2rem;
@@ -777,6 +778,9 @@ article:hover #social-button, article:active #social-button {
 
     #activities {
         padding: 0;
+    }
+    #activity-container article {
+        height: 550px !important;
     }
 }
 
@@ -822,7 +826,7 @@ article:hover #social-button, article:active #social-button {
 
     #activity-container article {
         width: 280px !important;
-        height: 360px !important;
+        height: 430px !important;
     }
     #activity-container article h2 {
         font-size: 1rem;
