@@ -255,18 +255,15 @@ section h1::after {
     height: 100%;
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        ". act-1 act-1 act-1 act-1 ."
-        "act-2 act-2 act-2 act-3 act-3 act-3";
+    grid-template-columns: 1fr 1fr;
     gap: 4rem 0;
     justify-items: center;
 }
 
 #activity-container article {
     width: 600px;
-    height: 600px;
+    height: 650px;
     color: var(--color-primary) !important;
     border-radius: 10px;
     position: relative;
@@ -292,7 +289,7 @@ section h1::after {
 #activity-container article p {
     padding: 0 2rem 1.5rem 3rem;
     font-family: 'Hind Vadodara', sans-serif;
-    font-weight: 800;
+    font-weight: 500;
     color: var(--color-light2);
 }
 
@@ -311,6 +308,7 @@ section h1::after {
     background-color: var(--color-light2);
     color: var(--color-secondary);
     opacity: 0;
+    cursor: pointer;
     transition: 300ms bottom ease-out 150ms;
 }
 
@@ -321,8 +319,12 @@ section h1::after {
 }
 
 #activity-container article button:hover {
-    box-shadow: 0 0 20px 0 rgba(218, 136, 179, 0.329) inset;
-    color: var(--color-dark);
+    color: var(--color-offwhite);
+    background: rgb(133,79,108);
+    background: -moz-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: -webkit-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    background: linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1); 
 }
 
 #activity-container article figure {
@@ -347,27 +349,6 @@ section h1::after {
     height: 100%;
     object-fit: cover;
     border-radius: inherit;
-}
-
-#activity-1 {
-    grid-area: act-1;
-    width: 700px !important;
-}
-
-#activity-1 figure {
-    height: 70% !important;
-}
-
-#activity-1 button {
-    left: 250px !important; 
-}
-
-#activity-2 {
-    grid-area: act-2;
-}
-
-#activity-3 {
-    grid-area: act-3;
 }
 
 /* ============================== Outreach ============================== */

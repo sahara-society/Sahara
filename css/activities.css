@@ -350,7 +350,7 @@ section h1::after {
     grid-area: des;
     text-align: left;
     font-family: 'Hind Vadodara', sans-serif;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .activity-about ul {
@@ -362,6 +362,8 @@ section h1::after {
     margin-left: 20px;
     padding-left: 10px;
     line-height: 1.5rem;
+    font-family: "Mukta", sans-serif;
+    font-weight: 600;
 }
 
 .activity-about ul li::marker {
