@@ -78,7 +78,7 @@ section h1::after {
     width: 60%;
     font-family: 'Hind Vadodara', sans-serif;
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 400;
     margin-top: -1rem;
 }
 
@@ -117,15 +117,12 @@ section h1::after {
     display: inline-block;
 }
 
-#act-types article:hover {
-    transform: rotateY(0deg);
-}
 
-#act-types article:hover a {
+#act-types article:hover a, #act-types article:active a {
     opacity: 1;
 }
 
-#act-types article a:hover {
+#act-types article a:hover, #act-types article a:active {
     text-decoration: underline;
 }
 
@@ -180,6 +177,13 @@ section h1::after {
     flex-direction: row;
 }
 
+.parties a {
+    all: unset !important;
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+}
+
 .parties img {
     height: 60px;
 }
@@ -225,7 +229,7 @@ section h1::after {
     user-select: none;
 }
 
-.gallery:hover {
+.gallery:hover, gallery:active {
     border-color: var(--color-light2);
 }
 
@@ -331,7 +335,7 @@ section h1::after {
     border-bottom: 5px dashed var(--color-light1);
 }
 
-.location:hover i, .date:hover i, .route:hover span {
+.location:hover i, .date:hover i, .route:hover span, .location:active i, .date:active i, .route:active span {
     color: var(--color-light2);
     border-color: var(--color-light2) !important;
 }
@@ -397,7 +401,7 @@ section h1::after {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#522b5b",endColorstr="#2b124c",GradientType=1); 
 }
 
-.activity-about button:hover {
+.activity-about button:hover, .activity-about button:active {
     color: var(--color-light2);
     font-size: 1.2rem;
 
@@ -406,6 +410,11 @@ section h1::after {
     background: -webkit-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
     background: linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1); 
+}
+
+.activity-about button a {
+    width: 100%;
+    height: 100%;
 }
 
 .activity-about button i {
@@ -582,5 +591,499 @@ section h1::after {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+/* =============================== Responsiveness =============================== */
+
+@media screen and (max-width: 1600px) {
+    #intro figure {
+        width: 600px;
+    }
+    #act-types {
+        width: 80%;
+    }
+
+    .activities {
+        padding: 6rem 10rem;
+    }
+
+    .activities h1 {
+        font-size: 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+    #act-types {
+        width: 100%;
+    }
+    #intro p {
+        width: 80%;
+    }
+    .activities {
+        padding: 6rem 5rem;
+    }
+
+    .activities h1 {
+        font-size: 3.5rem;
+    }
+    .tm-carousel {
+        transform: translateX(-80px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #act-types {
+        width: 120%;
+    }
+    #intro p {
+        width: 100%;
+    }
+
+    .activities {
+        padding: 6rem 5rem;
+    }
+    .activities h1 {
+        font-size: 3rem;
+    }
+    .collab {
+        width: 100%;
+    }
+    .gallery {
+        height: 480px;
+    }
+    .route .lines span {
+        width: 50px;
+        height: 20px;
+    }
+    .route .loc {
+        font-size: 1rem;
+    }
+    .location .date {
+        font-size: 1.1rem;
+    }
+    .trip-details i {
+        font-size: 1.5rem;
+    }
+    .activity-about .links {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+    .activity-about button {
+        width: 160px;
+        height: 50px;
+        font-size: 1rem !important;
+    }
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+    .tm-carousel {
+        transform: translateX(-170px);
+        gap: 3rem;
+    }
+    .tm-carousel article {
+        height: 220px;
+    }
+    .tm-carousel article blockquote {
+        font-size: 0.5rem;
+    }
+    .active-testimonial {
+        transform: scale(1.2);
+    }
+    .active-testimonial blockquote {
+        font-size: 0.7rem !important;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    #act-types article {
+        width: 300px;
+    }
+    #act-types article h3 {
+        font-size: 1rem;
+    }
+
+    .activities h1 {
+        font-size: 2.5rem;
+    }
+    .collab {
+        width: 100%;
+    }
+    .collab .parties img {
+        height: 50px;
+    }
+    .collab .parties h3 {
+        font-size: 1rem;
+    }
+    .gallery {
+        height: 442px;
+    }
+    .trip-details {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: space-between;
+        grid-template-areas: "location . date" "route route route";
+    }
+    .trip-details .location {
+        grid-area: location;
+    }
+    .trip-details .date {
+        grid-area: date;
+    }
+    .trip-details .route {
+        grid-area: route;
+        grid-column: 1/4;
+    }
+    .location, .date {
+        font-size: 1rem;
+    }
+    .activity-about {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main section {
+        padding: 7rem 4rem !important;
+    }
+    #intro h1 {
+        font-size: 3rem;
+    }
+    #act-types {
+        width: 100%;
+    }
+    .activities h1 {
+        font-size: 2rem;
+    }
+    .collab .parties {
+        width: 200px !important;
+    }
+    .gallery {
+        height: 350px;
+    }
+    .route .loc {
+        font-size: 1rem;
+        line-height: 100%;
+        font-weight: 600;
+    }
+    .activity-about p {
+        text-align: center;
+    }
+    .tm-carousel {
+        transform: translateX(-230px);
+    }
+    .tm-carousel article {
+        height: 200px;
+    }
+    .active-testimonial {
+        width: 400px !important;
+        transform: scale(1.2);
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main section {
+        padding: 7rem 2rem !important;
+    }
+    #intro figure {
+        width: 300px;
+        height: auto;
+    }
+    #intro p {
+        font-size: 0.8rem;
+    }
+    #act-types article {
+        width: 170px;    
+    }
+    .activities {
+        overflow: hidden;
+        padding: 3rem !important;
+    }
+    .activities h1 {
+        font-size: 1.3rem;
+    }
+    #trip-2 h1::after {
+        top: -45%;
+    }
+    .activities h4 {
+        font-size: 0.6rem;
+    }
+    .collab {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+    }
+    .collab .parties {
+        width: 180px !important;
+    }
+    .collab .parties img {
+        height: 40px;
+    }
+    .collab .parties h3 {
+        font-size: 0.7rem !important;
+    }
+    .collab .parties h3::after {
+        top: 65%;
+    }
+    .gallery {
+        height: 180px;
+        border-radius: 5px;
+    }
+    .activity-about {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "des" "points" "button";
+        height: 500px !important;
+    }
+    .trip-details i {
+        font-size: 1rem;
+    }
+    .route {
+        height: fit-content;
+        padding-top: 10px;
+    }
+    .route .loc {
+        font-size: 0.7rem;
+    }
+    .route .lines span {
+        width: 40px;
+        height: 15px;
+        border-width: 2px !important;
+    }
+    .location, .date {
+        font-size: 0.7rem;
+    }
+    .activity-about p {
+        font-size: 0.7rem;
+    }
+    .activity-about ul {
+        height: fit-content;
+    }
+    .activity-about ul li {
+        margin-left: 5px;
+        font-size: 0.7rem;
+    }
+    .activity-about .links {
+        flex-direction: row;
+        height: fit-content;
+    }
+    .activity-about .links button {
+        font-size: 0.8rem !important;
+        width: 140px;
+    }
+
+    .testimonials {
+        height: 550px;
+    }
+    .testimonials h2 {
+        font-size: 1.2rem;
+    }
+    .tm-carousel {
+        transform: translateX(-10px);
+        gap: 2rem;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tm-carousel article {
+        height: 100px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-items: space-between;
+        align-items: center;
+    }
+    .tm-carousel article h4::before, .tm-carousel article h4::after {
+        font-size: 60px;
+    }
+    .tm-carousel blockquote {
+        font-size: 0.3rem !important;
+    }
+    .active-testimonial {
+        width: 250px !important;
+        height: 180px !important;
+    }
+    .active-testimonial blockquote {
+        width: 230px !important;
+        font-size: 0.55rem !important;
+    }
+    .active-testimonial h4 {
+        font-size: 0.7rem !important;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+    #act-types article {
+        width: 150px;
+    }
+    #act-types article h3 {
+        font-size: 0.8rem;
+    }
+    #act-types article a {
+        font-size: 0.6rem;
+    }
+    .activities h1 {
+        font-size: 1.2rem;
+    }
+    .gallery {
+        height: 150px;
+    }
+    .trip-details i {
+        font-size: 0.8rem;
+    }
+    .route .loc {
+        font-size: 0.6rem;
+    }
+    .location, .date {
+        font-size: 0.6rem;
+    }
+    .activity-about p {
+        font-size: 0.6rem;
+    }
+    .activity-about ul li {
+        font-size: 0.6rem;
+    }
+    .activity-about .links button {
+        font-size: 0.7rem !important;
+        width: 120px;
+        height: 40px;
+    }
+    .testimonials {
+        height: 470px;
+    }
+    .testimonials h2 {
+        font-size: 1rem;
+    }
+    .tm-carousel article {
+        height: 80px;
+        width: 180px;
+    }
+    .tm-carousel blockquote {
+        font-size: 0.2rem !important;
+        width: 150px !important;
+    }
+    .active-testimonial {
+        width: 210px !important;
+        height: 150px !important;
+    }
+    .active-testimonial blockquote {
+        width: 190px !important;
+        font-size: 0.4rem !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #intro {
+        padding-bottom: 0 !important;
+    }
+    #intro h1 {
+        font-size: 2rem;
+    }
+    #intro figure {
+        width: 250px;
+        height: auto;
+    }
+    #intro p {
+        font-size: 0.6rem;
+    }
+    #act-types article {
+        width: 120px;
+        height: 100px;
+    }
+    #act-types article h3 {
+        font-size: 0.7rem;
+    }
+    #act-types article a {
+        font-size: 0.5rem;
+    }
+    #act-types article a span {
+        font-size: 0.5rem;
+    }
+
+    .activities h1 {
+        font-size: 1rem;
+    }
+    .collab {
+        gap: 0;
+    }
+    .collab .parties {
+        width: 150px !important;
+    }
+    .collab .parties img {
+        height: 30px;
+    }
+    .collab .parties h3 {
+        font-size: 0.6rem !important;
+    }
+    .collab .parties h3::after {
+        top: 65%;
+    }
+    .gallery {
+        height: 120px;
+    }
+
+    .trip-details i {
+        font-size: 0.7rem;
+    }
+    .location, .date {
+        font-size: 0.5rem;
+    }
+    .route .lines span {
+        width: 30px;
+        height: 10px;
+        border-width: 2px !important;
+    }
+    .route .loc {
+        font-size: 0.5rem;
+    }
+    .activity-about {
+        padding: 0;
+        height: 400px !important;
+    }
+    .activity-about p {
+        font-size: 0.5rem;
+    }
+    .activity-about ul li {
+        font-size: 0.5rem;
+        padding-left: 5px;
+        line-height: 120%;
+        padding-bottom: 10px;
+    }
+    .activity-about .links button {
+        font-size: 0.6rem !important;
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    .testimonials {
+        height: 420px;
+    }
+    .tm-carousel {
+        width: 250px;
+    }
+    .tm-carousel article {
+        height: 0px;
+        width: 150px;
+        overflow: hidden;
+    }
+    .active-testimonial {
+        width: 180px !important;
+        height: 100px !important;
+    }
+    .active-testimonial blockquote {
+        width: 160px !important;
+        font-size: 0.3rem !important;
+    }
+    .active-testimonial h4 {
+        font-size: 0.45rem !important;
     }
 }
