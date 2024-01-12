@@ -25,7 +25,7 @@ section h1 {
 }
 
 section h1::after {
-    font-family: 'Hind Vadodara', sans-serif;
+    font-family: "Hind Vadodara", sans-serif;
     font-size: 160%;
     color: var(--color-offwhite);
     position: absolute;
@@ -58,10 +58,14 @@ section h1::after {
     line-height: 90%;
     letter-spacing: 3px;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
-    background-image: linear-gradient(45deg, var(--color-offwhite) 0, var(--color-light1) 70%);
+    background-image: linear-gradient(
+        45deg,
+        var(--color-offwhite) 0,
+        var(--color-light1) 70%
+    );
 }
 
 #about h2 {
@@ -96,12 +100,12 @@ section h1::after {
     width: 620px;
     margin-top: 1rem;
     text-align: left;
-    font-family: 'Hind Vadodara', sans-serif;
+    font-family: "Hind Vadodara", sans-serif;
     font-weight: 400;
 }
 
 #about article p em {
-    font-family: 'Mukta', sans-serif;
+    font-family: "Mukta", sans-serif;
     font-weight: 600;
 }
 
@@ -141,9 +145,27 @@ section h1::after {
 #goals {
     height: 900px;
 
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(133,79,108,1) 10%, rgba(82,43,91,1) 67%, rgba(43,18,76,1) 97%);
-    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(133,79,108,1) 10%, rgba(82,43,91,1) 67%, rgba(43,18,76,1) 97%);
-    background: linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(133,79,108,1) 10%, rgba(82,43,91,1) 67%, rgba(43,18,76,1) 97%);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(133, 79, 108, 1) 10%,
+        rgba(82, 43, 91, 1) 67%,
+        rgba(43, 18, 76, 1) 97%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(133, 79, 108, 1) 10%,
+        rgba(82, 43, 91, 1) 67%,
+        rgba(43, 18, 76, 1) 97%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(133, 79, 108, 1) 10%,
+        rgba(82, 43, 91, 1) 67%,
+        rgba(43, 18, 76, 1) 97%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#2b124c",GradientType=1);
 }
 
@@ -204,7 +226,7 @@ section h1::after {
 
 #goals article p {
     padding: 1.8rem;
-    font-family: 'Hind Vadodara', sans-serif;
+    font-family: "Hind Vadodara", sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     text-align: justify;
@@ -215,13 +237,15 @@ section h1::after {
     padding: 60px 2rem 0 2rem !important;
 }
 
-#goals article:hover, #goals article:active {
+#goals article:hover,
+#goals article:active {
     box-shadow: 0 0 200px 2px rgba(133, 79, 108, 0.329) inset,
-                0 0 30px 0 #854f6c83;
+        0 0 30px 0 #854f6c83;
     color: var(--color-offwhite) !important;
 }
 
-#goals article:hover figure img, #goals article:active figure img {
+#goals article:hover figure img,
+#goals article:active figure img {
     transform: scale(1.3) rotate(3deg);
     opacity: 1;
 }
@@ -231,9 +255,24 @@ section h1::after {
 #activities {
     height: fit-content;
     padding: 5rem;
-    background: -moz-linear-gradient(0deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 12%, rgba(43,18,76,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(133,79,108,1) 3%, rgba(82,43,91,1) 10%, rgba(43,18,76,1) 100%);
-    background: linear-gradient(0deg, rgba(133,79,108,1) 3%, rgba(82,43,91,1) 12%, rgba(43,18,76,1) 100%);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(133, 79, 108, 1) 0%,
+        rgba(82, 43, 91, 1) 12%,
+        rgba(43, 18, 76, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(133, 79, 108, 1) 3%,
+        rgba(82, 43, 91, 1) 10%,
+        rgba(43, 18, 76, 1) 100%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(133, 79, 108, 1) 3%,
+        rgba(82, 43, 91, 1) 12%,
+        rgba(43, 18, 76, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#2b124c",GradientType=1);
 }
 
@@ -268,16 +307,41 @@ section h1::after {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 33%, rgba(82,43,91,1) 68%);
-    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 33%, rgba(82,43,91,1) 68%);
-    background: linear-gradient(0deg, rgba(43,18,76,1) 33%, rgba(82,43,91,1) 68%);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 33%,
+        rgba(82, 43, 91, 1) 68%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 33%,
+        rgba(82, 43, 91, 1) 68%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 33%,
+        rgba(82, 43, 91, 1) 68%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 }
 
-#activity-container article:hover, #activity-container article:active {
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
-    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
-    background: linear-gradient(0deg, rgba(43,18,76,1) 57%, rgba(82,43,91,1) 82%);
+#activity-container article:hover,
+#activity-container article:active {
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 57%,
+        rgba(82, 43, 91, 1) 82%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 57%,
+        rgba(82, 43, 91, 1) 82%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 57%,
+        rgba(82, 43, 91, 1) 82%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
 }
 
@@ -288,7 +352,7 @@ section h1::after {
 
 #activity-container article p {
     padding: 0 2rem 1.5rem 3rem;
-    font-family: 'Hind Vadodara', sans-serif;
+    font-family: "Hind Vadodara", sans-serif;
     font-weight: 500;
     color: var(--color-light2);
 }
@@ -312,7 +376,8 @@ section h1::after {
     transition: 300ms bottom ease-out 150ms;
 }
 
-#activity-container article:hover button, #activity-container article:active button {
+#activity-container article:hover button,
+#activity-container article:active button {
     bottom: 40px;
     opacity: 100%;
     z-index: 5;
@@ -320,11 +385,23 @@ section h1::after {
 
 #activity-container article button:hover {
     color: var(--color-offwhite);
-    background: rgb(133,79,108);
-    background: -moz-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
-    background: -webkit-linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
-    background: linear-gradient(292deg, rgba(133,79,108,1) 0%, rgba(82,43,91,1) 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1); 
+    background: rgb(133, 79, 108);
+    background: -moz-linear-gradient(
+        292deg,
+        rgba(133, 79, 108, 1) 0%,
+        rgba(82, 43, 91, 1) 90%
+    );
+    background: -webkit-linear-gradient(
+        292deg,
+        rgba(133, 79, 108, 1) 0%,
+        rgba(82, 43, 91, 1) 90%
+    );
+    background: linear-gradient(
+        292deg,
+        rgba(133, 79, 108, 1) 0%,
+        rgba(82, 43, 91, 1) 90%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#854f6c",endColorstr="#522b5b",GradientType=1);
 }
 
 #activity-container article figure {
@@ -337,7 +414,8 @@ section h1::after {
     overflow: hidden;
 }
 
-#activity-container article:hover figure, #activity-container article:active figure {
+#activity-container article:hover figure,
+#activity-container article:active figure {
     padding: 0;
     transform: scale(1.05);
     opacity: 0.5;
@@ -356,9 +434,24 @@ section h1::after {
 #outreach {
     height: 550px;
     background-color: var(--color-secondary);
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 72%, rgba(133,79,108,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 72%, rgba(133,79,108,1) 100%);
-    background: linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 72%, rgba(133,79,108,1) 100%);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(82, 43, 91, 1) 72%,
+        rgba(133, 79, 108, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(82, 43, 91, 1) 72%,
+        rgba(133, 79, 108, 1) 100%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(82, 43, 91, 1) 72%,
+        rgba(133, 79, 108, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#854f6c",GradientType=1);
 }
 
@@ -416,7 +509,8 @@ section h1::after {
     margin-bottom: 15px !important;
 }
 
-#instagram img, #linkedin img {
+#instagram img,
+#linkedin img {
     width: 55px !important;
     margin-bottom: 20px !important;
 }
@@ -441,7 +535,8 @@ section h1::after {
     line-height: 80%;
 }
 
-#social-button, #social-button a {
+#social-button,
+#social-button a {
     all: unset;
     cursor: pointer;
 }
@@ -456,7 +551,8 @@ section h1::after {
     background: transparent;
 }
 
-article:hover #social-button, article:active #social-button {
+article:hover #social-button,
+article:active #social-button {
     opacity: 1;
 }
 
@@ -469,14 +565,13 @@ article:hover #social-button, article:active #social-button {
 #social-button a i {
     opacity: 1;
     font-size: 1.5rem;
-    color: var(--color-offwhite)
+    color: var(--color-offwhite);
 }
 
 /* 
 !PENDING:
 - Animations left
 */
-
 
 /* ============================== Animations  ============================== */
 
@@ -599,10 +694,10 @@ article:hover #social-button, article:active #social-button {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-        "act-1"
-        "act-2"
-        "act-3"
-        "act-4";
+            "act-1"
+            "act-2"
+            "act-3"
+            "act-4";
         gap: 4rem 0;
     }
     #activity-container article {
@@ -776,6 +871,14 @@ article:hover #social-button, article:active #social-button {
         font-size: 0.8rem;
     }
 
+    #goals article {
+        width: 300px;
+        height: 600px;
+    }
+    #goal-1 p {
+        padding-top: 10px !important;
+    }
+
     #activities {
         padding: 0;
     }
@@ -809,7 +912,9 @@ article:hover #social-button, article:active #social-button {
         font-size: 1rem;
     }
 
-    #goals h1, #activities h1, #outreach h1 {
+    #goals h1,
+    #activities h1,
+    #outreach h1 {
         font-size: 2rem;
     }
 

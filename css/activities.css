@@ -785,7 +785,7 @@ section h1::after {
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
     main section {
         padding: 7rem 2rem !important;
     }
@@ -794,10 +794,13 @@ section h1::after {
         height: auto;
     }
     #intro p {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
     #act-types article {
-        width: 170px;    
+        width: 150px;    
+    }
+    #act-types article h3 {
+        font-size: 0.9rem;
     }
     .activities {
         overflow: hidden;
@@ -923,12 +926,16 @@ section h1::after {
         font-size: 2.5rem;
     }
     #act-types article {
-        width: 150px;
+        width: 130px;
     }
     #act-types article h3 {
         font-size: 0.8rem;
+        padding: 0 10px;
     }
     #act-types article a {
+        font-size: 0.6rem;
+    }
+    #act-types article a span {
         font-size: 0.6rem;
     }
     .activities h1 {
