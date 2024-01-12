@@ -30,6 +30,7 @@ This is the official website of Sahara society. It is a social welfare society o
 - [x] **Button anchor link full**
 - [x] **LinkedIn link**
 - [x] **Font**
+- [x] **SEO Tags**
 - [ ] **Illustrations**
 - [ ] **Responsiveness**
 - [x] **Mail service for contact**
