@@ -3,15 +3,134 @@
 main {
     width: 100%;
     height: fit-content;
-    background-color: var(--color-light2);
+    padding-top: 1rem;
+    position: relative;
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    color: var(--color-light2);
+
+    background: rgb(43,18,76);
+    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#2b124c",GradientType=1);
 }
 
-main .container {
+main {
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
+    height: 1000px;
+    padding: 6rem 11rem;
+}
+
+main h1 {
+    font-size: 6rem;
+    position: relative;
+    z-index: 1;
+    -webkit-animation:  scale-out 1s ease-out forwards;
+    -moz-animation:     scale-out 1s ease-out forwards;
+    -o-animation:       scale-out 1s ease-out forwards;
+    animation:          scale-out 1s ease-out forwards;
+    transform: scale(0.7);
+}
+
+main h2 {
+    margin-top: -2.5rem;
+    font-size: 2.5rem;
+    font-family: "Mukta", sans-serif;
+    color: var(--color-light1);
+}
+
+
+
+/* ======================== Events ======================== */
+/* !PENDING:
+Design will be like activities in what we do
+logo in center
+dotted line in center with logos at center
+*/
+
+#timeline article {
+    width: 600px;
+    height: 650px;
+    color: var(--color-primary) !important;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 33%,
+        rgba(82, 43, 91, 1) 68%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 33%,
+        rgba(82, 43, 91, 1) 68%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 33%,
+        rgba(82, 43, 91, 1) 68%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
+
+}
+
+
+#timeline article img {
+    width: 50px;
+    height: auto;
+}
+
+
+#timeline article:hover,
+#timeline article:active {
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 57%,
+        rgba(82, 43, 91, 1) 82%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 57%,
+        rgba(82, 43, 91, 1) 82%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 57%,
+        rgba(82, 43, 91, 1) 82%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
+}
+
+#timeline article h3 {
+    margin: 2rem 0 1rem 0;
+    font-family: "Bree Serif", serif;
+    color: var(--color-light2);
+}
+
+#timeline article p {
+    padding: 0 2rem 1.5rem 3rem;
+    font-family: "Hind Vadodara", sans-serif;
+    font-weight: 500;
+    color: var(--color-light2);
+}
+
+#timeline article:hover h3 {
+    color: var(--color-offwhite);
+}
+
+
+#timeline article:hover figure,
+#timeline article:active figure {
+    padding: 0;
+    transform: scale(1.05);
+    opacity: 0.5;
+}
+
+#timeline figure img {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
 }

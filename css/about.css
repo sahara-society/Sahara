@@ -374,7 +374,8 @@ section h1::after {
     color: var(--color-light2);
 }
 
-#activity-container article:hover h2 {
+#activity-container article:hover h2,
+#activity-container article:active h2 {
     color: var(--color-offwhite);
 }
 

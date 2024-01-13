@@ -747,6 +747,9 @@ section h1::after {
         font-size: 4rem;
     }
 
+    .gallery {
+        height: 550px;
+    }
     .tm-carousel {
         transform: translateX(-80px);
     }
