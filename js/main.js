@@ -94,5 +94,5 @@ function updateTestimonial(actCarousel) {
     testCarousel.appendChild(firstNode);
 
     testCarousel.getElementsByTagName("article")[1].classList.add("active-testimonial");
-    setTimeout(updateTestimonial, 7000, actCarousel);
+    setTimeout(updateTestimonial, 3700, actCarousel);
 }

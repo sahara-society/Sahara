@@ -22,7 +22,10 @@ section h1 {
     font-size: 5rem;
     position: relative;
     z-index: 1;
-    animation: scale-out 1s ease-out forwards;
+    -webkit-animation:  scale-out 1s ease-out forwards;
+    -moz-animation:     scale-out 1s ease-out forwards;
+    -o-animation:       scale-out 1s ease-out forwards;
+    animation:          scale-out 1s ease-out forwards;
     transform: scale(0.7);
 }
 
@@ -35,7 +38,10 @@ section h1::after {
     left: 42%;
     opacity: 0;
     z-index: -1;
-    animation: fade-out 500ms ease-in 1.3s forwards;
+    -webkit-animation:  fade-out 500ms ease-in 1.3s forwards;
+    -moz-animation:     fade-out 500ms ease-in 1.3s forwards;
+    -o-animation:       fade-out 500ms ease-in 1.3s forwards;
+    animation:          fade-out 500ms ease-in 1.3s forwards;
 }
 
 /* =============================== INTRO =============================== */
@@ -260,6 +266,12 @@ section h1::after {
     #team article {
         padding: 2rem 1rem;
     }
+
+    #team article figure {
+        width: 120px;
+        height: 120px;
+    }
+
     #team article button {
         margin-top: 0;
         font-size: 0.9rem;

@@ -32,7 +32,10 @@ section h1::after {
     top: -60%;
     opacity: 0;
     z-index: -1;
-    animation: fade-out 500ms ease-in 1.3s forwards;
+    -webkit-animation:  fade-out 500ms ease-in 1.3s forwards;
+    -moz-animation:     fade-out 500ms ease-in 1.3s forwards;
+    -o-animation:       fade-out 500ms ease-in 1.3s forwards;
+    animation:          fade-out 500ms ease-in 1.3s forwards;
 }
 
 /* ============================== About ============================== */
@@ -93,7 +96,10 @@ section h1::after {
     background-color: var(--color-light2);
     left: 3px;
     bottom: 2px;
-    animation: line-out 1s ease-out 1s forwards;
+    -webkit-animation:  line-out 1s ease-out 1s forwards;
+    -moz-animation:     line-out 1s ease-out 1s forwards;
+    -o-animation:       line-out 1s ease-out 1s forwards;
+    animation:          line-out 1s ease-out 1s forwards;
 }
 
 #about article p {
@@ -119,7 +125,11 @@ section h1::after {
     color: var(--color-primary);
     border-radius: 10px;
     opacity: 0;
-    animation: scale-button 500ms ease-out 2.3s forwards;
+
+    -webkit-animation:  scale-button 500ms ease-out 2.3s forwards;
+    -moz-animation:     scale-button 500ms ease-out 2.3s forwards;
+    -o-animation:       scale-button 500ms ease-out 2.3s forwards;
+    animation:          scale-button 500ms ease-out 2.3s forwards;
 }
 
 .icon-hidden {
@@ -173,7 +183,11 @@ section h1::after {
     grid-area: heading;
     font-size: 4rem;
     color: var(--color-light2);
-    animation: scale-out 1s ease-out forwards;
+
+    -webkit-animation:  scale-out 1s ease-out forwards;
+    -moz-animation:     scale-out 1s ease-out forwards;
+    -o-animation:       scale-out 1s ease-out forwards;
+    animation:          scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
 
@@ -280,7 +294,10 @@ section h1::after {
     grid-area: heading;
     font-size: 4rem;
     color: var(--color-light2);
-    animation: scale-out 1s ease-out forwards;
+    -webkit-animation:  scale-out 1s ease-out forwards;
+    -moz-animation:     scale-out 1s ease-out forwards;
+    -o-animation:       scale-out 1s ease-out forwards;
+    animation:          scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
 
@@ -459,7 +476,10 @@ section h1::after {
     grid-area: heading;
     font-size: 4rem;
     color: var(--color-light2);
-    animation: scale-out 1s ease-out forwards;
+    -webkit-animation:  scale-out 1s ease-out forwards;
+    -moz-animation:     scale-out 1s ease-out forwards;
+    -o-animation:       scale-out 1s ease-out forwards;
+    animation:          scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
 
@@ -575,6 +595,186 @@ article:active #social-button {
 
 /* ============================== Animations  ============================== */
 
+@-webkit-keyframes scale-button {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94%;
+    }
+}
+
+@-webkit-keyframes goal-line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 12%;
+    }
+}
+
+@-webkit-keyframes activities-line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+@-webkit-keyframes scale-out {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
+@-moz-keyframes scale-button {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        -moz-transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        -moz-transform: scale(1);
+    }
+}
+
+@-moz-keyframes line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94%;
+    }
+}
+
+@-moz-keyframes goal-line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 12%;
+    }
+}
+
+@-moz-keyframes activities-line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+@-moz-keyframes scale-out {
+    0% {
+        -moz-transform: scale(0);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@-moz-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
+@-o-keyframes scale-button {
+    0% {
+        opacity: 0;
+        -o-transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        -o-transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        -o-transform: scale(1);
+    }
+}
+
+@-o-keyframes line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94%;
+    }
+}
+
+@-o-keyframes goal-line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 12%;
+    }
+}
+
+@-o-keyframes activities-line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+@-o-keyframes scale-out {
+    0% {
+        -o-transform: scale(0);
+    }
+    100% {
+        -o-transform: scale(1);
+    }
+}
+
+@-o-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
 @keyframes scale-button {
     0% {
         opacity: 0;
@@ -640,6 +840,9 @@ article:active #social-button {
     main section {
         padding: 7rem 5rem;
     }
+    #about {
+        overflow-x: hidden;
+    }
 
     #goals h1::after {
         left: 31%;
@@ -648,12 +851,19 @@ article:active #social-button {
         gap: 2rem;
     }
     #goals article {
-        width: 320px;
+        width: 280px;
+        height: 630px;
     }
 
     #activities h1::after {
         left: 29.5%;
     }
+
+    #activities article {
+        width: 500px;
+        height: 700px;
+    }
+
     #outreach h1::after {
         left: 32%;
     }

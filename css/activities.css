@@ -22,7 +22,10 @@ section h1 {
     font-size: 5rem;
     position: relative;
     z-index: 1;
-    animation: scale-out 1s ease-out forwards;
+    -webkit-animation:  scale-out 1s ease-out forwards;
+    -moz-animation:     scale-out 1s ease-out forwards;
+    -o-animation:       scale-out 1s ease-out forwards;
+    animation:          scale-out 1s ease-out forwards;
     transform: scale(0.7);
 }
 
@@ -35,7 +38,10 @@ section h1::after {
     left: 42%;
     opacity: 0;
     z-index: -1;
-    animation: fade-out 500ms ease-in 1.3s forwards;
+    -webkit-animation:  fade-out 500ms ease-in 1.3s forwards;
+    -moz-animation:     fade-out 500ms ease-in 1.3s forwards;
+    -o-animation:       fade-out 500ms ease-in 1.3s forwards;
+    animation:          fade-out 500ms ease-in 1.3s forwards;
 }
 
 /* =============================== INTRO =============================== */
@@ -61,7 +67,10 @@ section h1::after {
     line-height: 90%;
     opacity: 0;
     transform: scale(0.8);
-    animation: show-heading 1s ease-out forwards;
+    -webkit-animation:  show-heading 1s ease-out forwards;
+    -moz-animation:     show-heading 1s ease-out forwards;
+    -o-animation:       show-heading 1s ease-out forwards;
+    animation:          show-heading 1s ease-out forwards;
 }
 
 #intro figure {
@@ -127,7 +136,11 @@ section h1::after {
 }
 
 #act-types article:hover a span {
-    animation: move-left-right 1s ease-in-out 300ms infinite;
+
+    -webkit-animation:  move-left-right 1s ease-in-out 300ms infinite;
+    -moz-animation:     move-left-right 1s ease-in-out 300ms infinite;
+    -o-animation:       move-left-right 1s ease-in-out 300ms infinite;
+    animation:          move-left-right 1s ease-in-out 300ms infinite;
 }
 
 /* =============================== Activities =============================== */
@@ -552,6 +565,39 @@ section h1::after {
 
 /* =============================== Animations =============================== */
 
+@-webkit-keyframes show-heading {
+    0% {
+        -webkit-transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+@-moz-keyframes show-heading {
+    0% {
+        -moz-transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+@-o-keyframes show-heading {
+    0% {
+        -o-transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        -o-transform: scale(1);
+        opacity: 100%;
+    }
+}
+
 @keyframes show-heading {
     0% {
         transform: scale(0.7);
@@ -563,6 +609,32 @@ section h1::after {
     }
 }
 
+@-webkit-keyframes scale-out {
+    0% {
+        -webkit-transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@-moz-keyframes scale-out {
+    0% {
+        -moz-transform: scale(0);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+
+@-o-keyframes scale-out {
+    0% {
+        -o-transform: scale(0);
+    }
+    100% {
+        -o-transform: scale(1);
+    }
+}
 
 @keyframes scale-out {
     0% {
@@ -573,12 +645,75 @@ section h1::after {
     }
 }
 
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
+@-moz-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
+@-o-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 10%;
+    }
+}
+
 @keyframes fade-out {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 10%;
+    }
+}
+
+@-webkit-keyframes move-left-right {
+    0% {
+        -webkit-transform: translateX(0);
+    }
+    50% {
+        -webkit-transform: translateX(10px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes move-left-right {
+    0% {
+        -moz-transform: translateX(0);
+    }
+    50% {
+        -moz-transform: translateX(10px);
+    }
+    100% {
+        -moz-transform: translateX(0);
+    }
+}
+
+@-o-keyframes move-left-right {
+    0% {
+        -o-transform: translateX(0);
+    }
+    50% {
+        -o-transform: translateX(10px);
+    }
+    100% {
+        -o-transform: translateX(0);
     }
 }
 
@@ -610,6 +745,10 @@ section h1::after {
 
     .activities h1 {
         font-size: 4rem;
+    }
+
+    .tm-carousel {
+        transform: translateX(-80px);
     }
     
 }

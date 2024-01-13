@@ -35,14 +35,20 @@ main {
     left: 16%;
     opacity: 0;
     transform: scale(0.9);
-    animation: show-heart 1s ease-out forwards;
+    -webkit-animation: show-heart 1s ease-out forwards;
+    -moz-animation:    show-heart 1s ease-out forwards;
+    -o-animation:      show-heart 1s ease-out forwards;
+    animation:          show-heart 1s ease-out forwards;
 }
 
 .hand {
     width: 150px;
     bottom: -50px;
     opacity: 0;
-    animation: move-hands 1s ease-out 1.05s forwards;
+    -webkit-animation:  move-hands 1s ease-out 1.05s forwards;
+    -moz-animation:     move-hands 1s ease-out 1.05s forwards;
+    -o-animation:       move-hands 1s ease-out 1.05s forwards;
+    animation:          move-hands 1s ease-out 1.05s forwards;
 }
 
 #hand-1 {
@@ -73,7 +79,10 @@ main {
     position: relative;
     bottom: 0;
     opacity: 0;
-    animation: fade-out 1s ease-out forwards;
+    -webkit-animation:  fade-out 1s ease-out forwards;
+    -moz-animation:     fade-out 1s ease-out forwards;
+    -o-animation:       fade-out 1s ease-out forwards;
+    animation:          fade-out 1s ease-out forwards;
 }
 
 #heading h2 {
@@ -84,7 +93,10 @@ main {
     font-weight: 600;
     color: var(--color-light1);
     opacity: 0;
-    animation: fade-out 1s linear 1s forwards;
+    -webkit-animation:  fade-out 1s linear 1s forwards;
+    -moz-animation:     fade-out 1s linear 1s forwards;
+    -o-animation:       fade-out 1s linear 1s forwards;
+    animation:          fade-out 1s linear 1s forwards;
 }
 
 
@@ -98,7 +110,10 @@ main {
     height: 4px;
     background-color: var(--color-light2);
     border-radius: 0 0 2px 2px;
-    animation: line-out 1s ease-out 1s forwards;
+    -webkit-animation:  line-out 1s ease-out 1s forwards;
+    -moz-animation:     line-out 1s ease-out 1s forwards;
+    -o-animation:       line-out 1s ease-out 1s forwards;
+    animation:          line-out 1s ease-out 1s forwards;
 }
 
 #intro {
@@ -119,11 +134,14 @@ main {
 }
 
 #intro #first {
-    animation: go-up-and-fade-out 1.5s ease-in-out 2s forwards;
     font-family: 'Mukta', sans-serif;
     font-weight: 300;
     line-height: 1.5rem;
     /* font-family: 'Hind Vadodara', sans-serif; */
+    -webkit-animation:  go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    -moz-animation:     go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    -o-animation:       go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    animation:          go-up-and-fade-out 1.5s ease-in-out 2s forwards;
 }
 
 #intro #second {
@@ -132,7 +150,10 @@ main {
     color: var(--color-light1);
     opacity: 0;
     margin-top: 0.5rem;
-    animation: go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    -webkit-animation:  go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    -moz-animation:     go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    -o-animation:       go-up-and-fade-out 1.5s ease-in-out 2s forwards;
+    animation:          go-up-and-fade-out 1.5s ease-in-out 2s forwards;
 }
 
 #second strong {
@@ -147,7 +168,10 @@ main {
 }
 
 #intro:hover a {
-    animation: fade-out 3s ease-out forwards;
+    -webkit-animation:  fade-out 3s ease-out forwards;
+    -moz-animation:     fade-out 3s ease-out forwards;
+    -o-animation:       fade-out 3s ease-out forwards;
+    animation:          fade-out 3s ease-out forwards;
 }
 
 #intro:hover a:hover {
@@ -176,6 +200,9 @@ main {
     color: var(--color-primary);
     border-radius: inherit;
     opacity: 0;
+    -webkit-animation: scale-button 1s ease-out 3.5s forwards;
+    -moz-animation:    scale-button 1s ease-out 3.5s forwards;
+    -o-animation:      scale-button 1s ease-out 3.5s forwards;
     animation: scale-button 1s ease-out 3.5s forwards;
 }
 
@@ -211,8 +238,10 @@ button a {
     font-size: 0.9rem;
     border-radius: 0 0 20px 20px;
     z-index: 1;
+    -webkit-animation: show-collab-button 500ms ease-out forwards;
+    -moz-animation:    show-collab-button 500ms ease-out forwards;
+    -o-animation:      show-collab-button 500ms ease-out forwards;
     animation: show-collab-button 500ms ease-out forwards;
-    transition: animation;
 }
 
 #collab-button:hover {
@@ -237,6 +266,39 @@ button:active {
 /* ---===========--- ANIMATIONS ---===========--- */
 
 
+@-webkit-keyframes show-heart {
+    0% {
+        -webkit-transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+@-moz-keyframes show-heart {
+    0% {
+        -moz-transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+@-o-keyframes show-heart {
+    0% {
+        -o-transform: scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        -o-transform: scale(1);
+        opacity: 100%;
+    }
+}
+
 @keyframes show-heart {
     0% {
         transform: scale(0.7);
@@ -244,6 +306,40 @@ button:active {
     }
     100% {
         transform: scale(1);
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes move-hands {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 20px;
+        opacity: 100%;
+    }
+
+}
+
+@-moz-keyframes move-hands {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 20px;
+        opacity: 100%;
+    }
+}
+
+@-o-keyframes move-hands {
+    0% {
+        bottom: -50px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 20px;
         opacity: 100%;
     }
 }
@@ -259,12 +355,72 @@ button:active {
     }
 }
 
+@-webkit-keyframes line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94%;
+    }
+}
+
+@-moz-keyframes line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94%;
+    }
+}
+
+@-o-keyframes line-out {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94%;
+    }
+}
+
 @keyframes line-out {
     0% {
         width: 0;
     }
     100% {
         width: 94%;
+    }
+}
+
+@-webkit-keyframes go-up-and-fade-out {
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    }
+    100% {
+        opacity: 100%;
+        bottom: 0;
+    }
+}
+
+@-moz-keyframes go-up-and-fade-out {
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    }
+    100% {
+        opacity: 100%;
+        bottom: 0;
+    }
+}
+
+@-o-keyframes go-up-and-fade-out {
+    0% {
+        opacity: 0;
+        bottom: -50px;
+    }
+    100% {
+        opacity: 100%;
+        bottom: 0;
     }
 }
 
@@ -279,12 +435,84 @@ button:active {
     }
 }
 
+@-webkit-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@-moz-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@-o-keyframes fade-out {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 @keyframes fade-out {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 100%;
+    }
+}
+
+@-webkit-keyframes scale-button {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes scale-button {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@-o-keyframes scale-button {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    75% {
+        opacity: 75%;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
     }
 }
 
@@ -303,6 +531,39 @@ button:active {
     }
 }
 
+@-webkit-keyframes show-collab-button {
+    0% {
+        opacity: 0;
+        bottom: 0;
+    }
+    100% {
+        opacity: 100%;
+        bottom: -45px;
+    }
+}
+
+@-moz-keyframes show-collab-button {
+    0% {
+        opacity: 0;
+        bottom: 0;
+    }
+    100% {
+        opacity: 100%;
+        bottom: -45px;
+    }
+}
+
+@-o-keyframes show-collab-button {
+    0% {
+        opacity: 0;
+        bottom: 0;
+    }
+    100% {
+        opacity: 100%;
+        bottom: -45px;
+    }
+}
+
 @keyframes show-collab-button {
     0% {
         opacity: 0;
@@ -315,6 +576,34 @@ button:active {
 }
 
 /* ============================== Responsiveness ============================== */
+
+@media screen and (max-width: 1600px) {
+    #heart {
+        width: 100px;
+        top: 40%;
+        left: 24%;
+    }
+    .hand {
+        width: 100px;
+    }
+    #hand-1 {
+        right: 20px;
+    }
+    #hand-2 {
+        left: 20px;
+    }
+    #heading h1 {
+        font-size: 6rem;
+        letter-spacing: 0.3rem;
+    }
+    #heading h2 {
+        font-size: 2.2rem;
+    }
+    #buttons {
+        margin-top: 5rem;
+    }
+
+}
 
 @media screen and (max-width: 500px) {
     #heading h1 {
