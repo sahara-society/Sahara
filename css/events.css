@@ -43,11 +43,6 @@ main h2 {
 
 
 /* ======================== Events ======================== */
-/* !PENDING:
-Design will be like activities in what we do
-logo in center
-dotted line in center with logos at center
-*/
 
 #timeline {
     margin: auto;
@@ -251,3 +246,11 @@ dotted line in center with logos at center
     border-left-color: transparent;
     border-right-color: var(--color-primary);
 }
+
+/* !PENDING:
+Animations left
+Improve background color of article when hover
+Date of Poster making competition
+Description
+Images of events (maybe carousel)
+*/
