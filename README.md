@@ -19,7 +19,7 @@ This is the official website of Sahara society. It is a social welfare society o
 -   [x] **Home Page**
 -   [x] **About Us**
 -   [x] **Activities**
--   [ ] **Events**
+-   [x] **Events**
 -   [x] **Our Team**
 -   [x] **Contact**
 
@@ -31,7 +31,7 @@ This is the official website of Sahara society. It is a social welfare society o
 - [x] **LinkedIn link**
 - [x] **Font**
 - [x] **SEO Tags**
-- [ ] **Illustrations**
+- [x] **Illustrations**
 - [ ] **Responsiveness**
 - [x] **Mail service for contact**
 - [ ] **Activities & Events will have carousel**

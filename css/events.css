@@ -18,7 +18,7 @@ main {
 
 main {
     width: 100%;
-    height: 1000px;
+    height: fit-content;
     padding: 6rem 11rem;
 }
 
@@ -49,13 +49,55 @@ logo in center
 dotted line in center with logos at center
 */
 
+#timeline {
+    margin: auto;
+    padding: 3rem 0;
+    width: 80%;
+    height: fit-content;
+    position: relative;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    border-radius: 5px;
+    height: 100%;
+    background: var(--color-light1);
+    top: 25px;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 1;
+    animation: moveline 6s linear;
+}
+
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+    
+}
+
+
 #timeline article {
-    width: 600px;
-    height: 650px;
+    width: 550px;
+    min-height: 520px;
+    max-height: 550px;
     color: var(--color-primary) !important;
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+/* 
     background: -moz-linear-gradient(
         0deg,
         rgba(43, 18, 76, 1) 33%,
@@ -71,16 +113,20 @@ dotted line in center with logos at center
         rgba(43, 18, 76, 1) 33%,
         rgba(82, 43, 91, 1) 68%
     );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1); */
 
+    background-color: var(--color-primary);
 }
 
-
-#timeline article img {
-    width: 50px;
-    height: auto;
+.left-container{
+    align-self: flex-start;
+    
 }
 
+.right-container{
+    align-self: flex-end;
+    
+}
 
 #timeline article:hover,
 #timeline article:active {
@@ -100,37 +146,108 @@ dotted line in center with logos at center
         rgba(82, 43, 91, 1) 82%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
+
+}
+
+#timeline article::after {
+    content: ".";
+    position: absolute;
+    top: 28%;
+    right: -130px;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    /* background-color: orange; */
+    background-image: url("../images/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 2px solid var(--color-light1);
+}
+
+#timeline .right-container::after {
+    left: -77px;
 }
 
 #timeline article h3 {
     margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
     font-family: "Bree Serif", serif;
     color: var(--color-light2);
 }
 
-#timeline article p {
-    padding: 0 2rem 1.5rem 3rem;
-    font-family: "Hind Vadodara", sans-serif;
-    font-weight: 500;
-    color: var(--color-light2);
-}
-
-#timeline article:hover h3 {
+#timeline article:hover h3,
+#timeline article:active h3 {
     color: var(--color-offwhite);
 }
 
-
-#timeline article:hover figure,
-#timeline article:active figure {
-    padding: 0;
-    transform: scale(1.05);
-    opacity: 0.5;
+#timeline article time {
+    align-self:last baseline;
+    margin-right: 2rem;
+    margin-top: -1rem;
+    color: var(--color-offwhite);
+    font-family: "Hind Vadodara", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 
+#timeline article p {
+    padding: 0 2rem 1.5rem 3rem;
+    font-size: 0.8rem;
+    font-family: "Hind Vadodara", sans-serif;
+    font-weight: 500;
+    color: var(--color-light1);
+}
+
+#timeline article:hover p,
+#timeline article:active p {
+    color: var(--color-light2);
+}
+
+
+#timeline article figure {
+    width: 100%;
+    height: 320px;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
 #timeline figure img {
-    height: 100%;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     border-radius: inherit;
+    opacity: 0.8;
+}
+
+#timeline article:hover figure,
+#timeline article:active figure{
+    border-radius: 0;
+}
+
+#timeline article:hover figure img,
+#timeline article:active figure img {
+    transform: scale(1.1);
+    opacity: 1;
+    border-radius: 0;
+}
+#timeline article span {
+    position: absolute;
+    top: 25%;
+    right: -50px;
+    width: 50px;
+    height: 44px;
+    background-color: transparent;
+    border-radius: 0;
+    border: 20px solid transparent;
+    border-left-color: var(--color-primary);
+}
+
+#timeline .right-container span {
+    left: -50px;
+    border-left-color: transparent;
+    border-right-color: var(--color-primary);
 }

@@ -466,7 +466,7 @@ section h1::after {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    transform: translateX(10px);
+    transform: translateX(30px);
 }
 
 .tm-carousel article {
