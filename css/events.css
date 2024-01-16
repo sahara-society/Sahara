@@ -9,10 +9,25 @@ main {
     font-family: "Bree Serif", serif;
     color: var(--color-light2);
 
-    background: rgb(43,18,76);
-    background: -moz-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
-    background: linear-gradient(0deg, rgba(43,18,76,1) 0%, rgba(82,43,91,1) 80%, rgba(43,18,76,1) 100%);
+    background: rgb(43, 18, 76);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(82, 43, 91, 1) 80%,
+        rgba(43, 18, 76, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(82, 43, 91, 1) 80%,
+        rgba(43, 18, 76, 1) 100%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(43, 18, 76, 1) 0%,
+        rgba(82, 43, 91, 1) 80%,
+        rgba(43, 18, 76, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#2b124c",GradientType=1);
 }
 
@@ -26,10 +41,10 @@ main h1 {
     font-size: 6rem;
     position: relative;
     z-index: 1;
-    -webkit-animation:  scale-out 1s ease-out forwards;
-    -moz-animation:     scale-out 1s ease-out forwards;
-    -o-animation:       scale-out 1s ease-out forwards;
-    animation:          scale-out 1s ease-out forwards;
+    -webkit-animation: scale-out 1s ease-out forwards;
+    -moz-animation: scale-out 1s ease-out forwards;
+    -o-animation: scale-out 1s ease-out forwards;
+    animation: scale-out 1s ease-out forwards;
     transform: scale(0.7);
 }
 
@@ -39,8 +54,6 @@ main h2 {
     font-family: "Mukta", sans-serif;
     color: var(--color-light1);
 }
-
-
 
 /* ======================== Events ======================== */
 
@@ -57,7 +70,7 @@ main h2 {
 }
 
 #timeline::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 6px;
     border-radius: 5px;
@@ -71,19 +84,17 @@ main h2 {
 }
 
 @keyframes moveline {
-    0%{
+    0% {
         height: 0;
     }
-    100%{
+    100% {
         height: 100%;
     }
-    
 }
-
 
 #timeline article {
     width: 550px;
-    min-height: 520px;
+    height: 520px;
     max-height: 550px;
     color: var(--color-primary) !important;
     border-radius: 10px;
@@ -92,7 +103,7 @@ main h2 {
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-/* 
+    /* 
     background: -moz-linear-gradient(
         0deg,
         rgba(43, 18, 76, 1) 33%,
@@ -113,14 +124,12 @@ main h2 {
     background-color: var(--color-primary);
 }
 
-.left-container{
+.left-container {
     align-self: flex-start;
-    
 }
 
-.right-container{
+.right-container {
     align-self: flex-end;
-    
 }
 
 #timeline article:hover,
@@ -141,7 +150,6 @@ main h2 {
         rgba(82, 43, 91, 1) 82%
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b124c",endColorstr="#522b5b",GradientType=1);
-
 }
 
 #timeline article::after {
@@ -178,7 +186,7 @@ main h2 {
 }
 
 #timeline article time {
-    align-self:last baseline;
+    align-self: last baseline;
     margin-right: 2rem;
     margin-top: -1rem;
     color: var(--color-offwhite);
@@ -201,7 +209,6 @@ main h2 {
     color: var(--color-light2);
 }
 
-
 #timeline article figure {
     width: 100%;
     height: 320px;
@@ -209,7 +216,6 @@ main h2 {
     border-radius: 10px;
     overflow: hidden;
 }
-
 
 #timeline figure img {
     width: 100%;
@@ -219,7 +225,7 @@ main h2 {
 }
 
 #timeline article:hover figure,
-#timeline article:active figure{
+#timeline article:active figure {
     border-radius: 0;
 }
 
@@ -254,3 +260,121 @@ Date of Poster making competition
 Description
 Images of events (maybe carousel)
 */
+
+/* ======================== Responsiveness ======================== */
+
+@media screen and (max-width: 1600px) {
+    main {
+        padding: 6rem 1rem;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    #timeline::after {
+        left: 307px;
+    }
+    #timeline article {
+        margin: 2rem;
+    }
+    #timeline .left-container {
+        align-self: flex-end;
+    }
+    #timeline .left-container span {
+        left: -50px;
+        border-left-color: transparent;
+        border-right-color: var(--color-primary);
+    }
+    #timeline .left-container::after {
+        left: -77px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #timeline::after {
+        left: 135px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main h1 {
+        font-size: 4rem;
+    }
+    main h2 {
+        font-size: 1.5rem;
+        margin-top: -1.5rem;
+    }
+    #timeline::after {
+        left: 77px;
+    }
+    #timeline article {
+        width: 400px;
+        height: 400px !important;
+        max-height: 400px !important;
+    }
+    #timeline article::after {
+        right: -50px;
+    }
+    #timeline article h3 {
+        font-size: 1.2rem;
+    }
+    #timeline article time {
+        margin-right: 1rem;
+    }
+    #timeline article p {
+        padding: 0 1rem 1.5rem 2rem;
+    }
+    #timeline article figure {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main h1 {
+        font-size: 3rem;
+    }
+    main h2 {
+        font-size: 1.2rem;
+    }
+    #timeline::after {
+        left: 45px;
+    }
+    #timeline article {
+        width: 300px;
+        height: fit-content !important;
+    }
+    #timeline article h3 {
+        font-size: 1rem;
+    }
+    #timeline article time {
+        margin-right: 1rem;
+    }
+    #timeline article p {
+        font-size: 0.8rem;
+    }
+    #timeline article figure {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main h1 {
+        font-size: 2.5rem;
+    }
+    #timeline article {
+        align-self: center !important;
+        width: 250px;
+        padding: 0 1rem;
+    }
+    #timeline::after {
+        content: none;
+    }
+    #timeline article span {
+        display: none;
+    }
+    #timeline article::after {
+        display: none;
+    }
+    #timeline article p {
+        font-size: 0.7rem;
+    }
+}
