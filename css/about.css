@@ -25,17 +25,17 @@ section h1 {
 }
 
 section h1::after {
-    font-family: "Hind Vadodara", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 160%;
     color: var(--color-offwhite);
     position: absolute;
     top: -60%;
     opacity: 0;
     z-index: -1;
-    -webkit-animation:  fade-out 500ms ease-in 1.3s forwards;
-    -moz-animation:     fade-out 500ms ease-in 1.3s forwards;
-    -o-animation:       fade-out 500ms ease-in 1.3s forwards;
-    animation:          fade-out 500ms ease-in 1.3s forwards;
+    -webkit-animation: fade-out 500ms ease-in 1.3s forwards;
+    -moz-animation: fade-out 500ms ease-in 1.3s forwards;
+    -o-animation: fade-out 500ms ease-in 1.3s forwards;
+    animation: fade-out 500ms ease-in 1.3s forwards;
 }
 
 /* ============================== About ============================== */
@@ -96,17 +96,17 @@ section h1::after {
     background-color: var(--color-light2);
     left: 3px;
     bottom: 2px;
-    -webkit-animation:  line-out 1s ease-out 1s forwards;
-    -moz-animation:     line-out 1s ease-out 1s forwards;
-    -o-animation:       line-out 1s ease-out 1s forwards;
-    animation:          line-out 1s ease-out 1s forwards;
+    -webkit-animation: line-out 1s ease-out 1s forwards;
+    -moz-animation: line-out 1s ease-out 1s forwards;
+    -o-animation: line-out 1s ease-out 1s forwards;
+    animation: line-out 1s ease-out 1s forwards;
 }
 
 #about article p {
     width: 620px;
     margin-top: 1rem;
     text-align: left;
-    font-family: "Hind Vadodara", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 400;
 }
 
@@ -126,10 +126,10 @@ section h1::after {
     border-radius: 10px;
     opacity: 0;
 
-    -webkit-animation:  scale-button 500ms ease-out 2.3s forwards;
-    -moz-animation:     scale-button 500ms ease-out 2.3s forwards;
-    -o-animation:       scale-button 500ms ease-out 2.3s forwards;
-    animation:          scale-button 500ms ease-out 2.3s forwards;
+    -webkit-animation: scale-button 500ms ease-out 2.3s forwards;
+    -moz-animation: scale-button 500ms ease-out 2.3s forwards;
+    -o-animation: scale-button 500ms ease-out 2.3s forwards;
+    animation: scale-button 500ms ease-out 2.3s forwards;
 }
 
 .icon-hidden {
@@ -184,10 +184,10 @@ section h1::after {
     font-size: 4rem;
     color: var(--color-light2);
 
-    -webkit-animation:  scale-out 1s ease-out forwards;
-    -moz-animation:     scale-out 1s ease-out forwards;
-    -o-animation:       scale-out 1s ease-out forwards;
-    animation:          scale-out 1s ease-out forwards;
+    -webkit-animation: scale-out 1s ease-out forwards;
+    -moz-animation: scale-out 1s ease-out forwards;
+    -o-animation: scale-out 1s ease-out forwards;
+    animation: scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
 
@@ -240,7 +240,7 @@ section h1::after {
 
 #goals article p {
     padding: 1.8rem;
-    font-family: "Hind Vadodara", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
     text-align: justify;
@@ -294,10 +294,10 @@ section h1::after {
     grid-area: heading;
     font-size: 4rem;
     color: var(--color-light2);
-    -webkit-animation:  scale-out 1s ease-out forwards;
-    -moz-animation:     scale-out 1s ease-out forwards;
-    -o-animation:       scale-out 1s ease-out forwards;
-    animation:          scale-out 1s ease-out forwards;
+    -webkit-animation: scale-out 1s ease-out forwards;
+    -moz-animation: scale-out 1s ease-out forwards;
+    -o-animation: scale-out 1s ease-out forwards;
+    animation: scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
 
@@ -369,7 +369,7 @@ section h1::after {
 
 #activity-container article p {
     padding: 0 2rem 1.5rem 3rem;
-    font-family: "Hind Vadodara", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
     color: var(--color-light2);
 }
@@ -477,10 +477,10 @@ section h1::after {
     grid-area: heading;
     font-size: 4rem;
     color: var(--color-light2);
-    -webkit-animation:  scale-out 1s ease-out forwards;
-    -moz-animation:     scale-out 1s ease-out forwards;
-    -o-animation:       scale-out 1s ease-out forwards;
-    animation:          scale-out 1s ease-out forwards;
+    -webkit-animation: scale-out 1s ease-out forwards;
+    -moz-animation: scale-out 1s ease-out forwards;
+    -o-animation: scale-out 1s ease-out forwards;
+    animation: scale-out 1s ease-out forwards;
     transform: scale(0.8);
 }
 
